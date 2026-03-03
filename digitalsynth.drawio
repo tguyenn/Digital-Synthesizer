@@ -1,0 +1,204 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.0">
+  <diagram name="Page-1" id="z_EA3OLY4g14P4a05k5T">
+    <mxGraphModel dx="1158" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rZvbUomGc76vvsedpobP-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#001DBC;" value="" vertex="1">
+          <mxGeometry height="330" width="420" x="879" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-89" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="rZvbUomGc76vvsedpobP-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-90" connectable="0" parent="rZvbUomGc76vvsedpobP-89" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Onboard DAC" vertex="1">
+          <mxGeometry relative="1" x="-0.3636" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="TM4C" vertex="1">
+          <mxGeometry height="100" width="120" x="450" y="524" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-12" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-14" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-16" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" target="rZvbUomGc76vvsedpobP-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-91" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="rZvbUomGc76vvsedpobP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-92" connectable="0" parent="rZvbUomGc76vvsedpobP-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Onboard ADC" vertex="1">
+          <mxGeometry relative="1" x="-0.1982" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Microphone" vertex="1">
+          <mxGeometry height="60" width="120" x="450" y="814" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Speaker" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-29" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="rZvbUomGc76vvsedpobP-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="USB1 Power" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-30" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-36" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="461" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-32" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-34" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" target="rZvbUomGc76vvsedpobP-38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="461" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-48" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-54" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="801" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-50" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="rZvbUomGc76vvsedpobP-55" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-52" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" target="rZvbUomGc76vvsedpobP-56" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="SPI ADC" vertex="1">
+          <mxGeometry height="60" width="120" x="940" y="1014" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="801" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="4x Hall Sensor" vertex="1">
+          <mxGeometry height="60" width="120" x="1118" y="1014" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-60" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="rZvbUomGc76vvsedpobP-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="245" />
+              <mxPoint x="725" y="549" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-73" connectable="0" parent="rZvbUomGc76vvsedpobP-60" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SPI BUS 1" vertex="1">
+          <mxGeometry relative="1" x="-0.7148" y="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-61" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="rZvbUomGc76vvsedpobP-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="574" />
+              <mxPoint x="800" y="574" />
+            </Array>
+            <mxPoint x="879" y="574.0526315789473" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-74" connectable="0" parent="rZvbUomGc76vvsedpobP-61" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SPI BUS 2" vertex="1">
+          <mxGeometry relative="1" x="-0.4317" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-62" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="rZvbUomGc76vvsedpobP-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="879" y="939" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-75" connectable="0" parent="rZvbUomGc76vvsedpobP-62" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SPI BUS 3" vertex="1">
+          <mxGeometry relative="1" x="-0.751" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Octave 1 PCB" vertex="1">
+          <mxGeometry height="30" width="90" x="880" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Octave 2 PCB" vertex="1">
+          <mxGeometry height="30" width="81" x="879" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-66" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Octave 3 PCB" vertex="1">
+          <mxGeometry height="30" width="91" x="879" y="774" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Main PCB" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#001DBC;" value="" vertex="1">
+          <mxGeometry height="330" width="420" x="880" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#001DBC;" value="" vertex="1">
+          <mxGeometry height="330" width="420" x="879" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="LCD" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-77" edge="1" parent="1" source="rZvbUomGc76vvsedpobP-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.422;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;" target="rZvbUomGc76vvsedpobP-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="492" />
+              <mxPoint x="411" y="492" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-79" connectable="0" parent="rZvbUomGc76vvsedpobP-77" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SPI BUS 4" vertex="1">
+          <mxGeometry relative="1" x="0.0304" y="4" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZvbUomGc76vvsedpobP-93" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="396" width="440" x="240" y="374" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
