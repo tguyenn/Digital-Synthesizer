@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP MCP3204T-CI_ST
+D 12-bit resolution  +/- 1 LSB max DNL  +/- 1 LSB max INL (MCP3204/3208-B)  +/- 2 LSB max INL (MCP3204/3208-C)  4 (MCP3204) or 8 (MCP3208) input channels  Analog inputs programmable as single-ended or pseudo-differential pairs  On-chip sample and hold  SPI serial interface (modes 0,0 and 1,1)  Single supply operation: 2.7V - 5.5V  100 ksps max. sampling rate at VDD = 5V  50 ksps max. sampling rate at VDD = 2.7V  Low power CMOS technology: - 500 nA typical standby current, 2 A max. - 400 A
+K
+F 
+$ENDCMP
+#
+$CMP AH49HNTR-G1
+D Board Mount Hall Effect / Magnetic Sensors Linear Hall Sensor 3mA 3 to 8V
+K
+F https://www.diodes.com//assets/Datasheets/AH49H.pdf
+$ENDCMP
+#
+$CMP LM4041CILPR
+D Voltage References Adj Prec Micropwr Shunt Vltg Ref
+K
+F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=https://www.ti.com/lit/gpn/lm4041a12
+$ENDCMP
+#
+#End Doc Library
