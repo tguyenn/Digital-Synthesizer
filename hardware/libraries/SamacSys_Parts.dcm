@@ -12,4 +12,19 @@ K
 F 
 $ENDCMP
 #
+<<<<<<< HEAD
+=======
+$CMP AH49HNTR-G1
+D Board Mount Hall Effect / Magnetic Sensors Linear Hall Sensor 3mA 3 to 8V
+K
+F https://www.diodes.com//assets/Datasheets/AH49H.pdf
+$ENDCMP
+#
+$CMP LM4041CILPR
+D Voltage References Adj Prec Micropwr Shunt Vltg Ref
+K
+F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=https://www.ti.com/lit/gpn/lm4041a12
+$ENDCMP
+#
+>>>>>>> 69e1cb6a10940b9ccd7f2f4718a5f6f45732e0e5
 #End Doc Library
