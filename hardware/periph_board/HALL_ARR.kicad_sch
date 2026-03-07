@@ -565,6 +565,16 @@
 		)
 		(uuid bd8882c4-6ebc-4e48-be72-1d3852c3ac82)
 	)
+	(text "3.2 mA each worst case scenario\n\n3.2 mA x 12 sensors = 38.4 mA"
+		(exclude_from_sim no)
+		(at 196.85 29.464 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "21a31708-a90b-4dab-86e3-f56a84ed9293")
+	)
 	(text "Hall Effect Sensors"
 		(exclude_from_sim no)
 		(at 46.99 16.002 0)

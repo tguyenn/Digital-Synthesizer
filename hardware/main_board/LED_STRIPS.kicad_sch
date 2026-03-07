@@ -1,0 +1,770 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "ab3486e3-1ba1-4519-9eeb-a678003e64e4")
+	(paper "A4")
+	(lib_symbols)
+	(rectangle
+		(start 92.71 49.53)
+		(end 156.21 76.2)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 10f79f85-046f-411f-a5ab-01a8705d2a31)
+	)
+	(rectangle
+		(start 21.59 49.53)
+		(end 91.44 76.2)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 61e03652-c829-4471-a76a-1e2050bd38ff)
+	)
+	(rectangle
+		(start 16.51 41.91)
+		(end 162.56 85.09)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid d2e71978-3c0c-48b5-a73d-bf0d3661b689)
+	)
+	(text "SPI1"
+		(exclude_from_sim no)
+		(at 94.742 48.514 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "30a817f3-3aee-4d3a-939b-0d1f996f6ef5")
+	)
+	(text "Peripheral Board Interfaces"
+		(exclude_from_sim no)
+		(at 30.988 44.196 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3e2d3bd4-eefc-4385-ba5e-1f248b0a37c5")
+	)
+	(text "SPI0"
+		(exclude_from_sim no)
+		(at 23.622 48.514 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "514e3509-89aa-480e-92d7-32945076cca5")
+	)
+	(sheet
+		(at 24.13 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1f5f1fcf-8246-4477-bb34-eca921fd147d")
+		(property "Sheetname" "Periph Board 1"
+			(at 24.13 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 24.13 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 24.13 57.15 180)
+			(uuid "9d2877ba-362a-4895-9e3c-e44ba555fa42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 38.1 57.15 0)
+			(uuid "e7ba8549-bca7-4957-bf4e-c93bc116b1b1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 24.13 62.23 180)
+			(uuid "ea6d9bd2-2696-49a0-aa49-b11d081d6dea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 24.13 64.77 180)
+			(uuid "bed1bdff-19a5-4747-be8c-bc8e2350bd5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 24.13 67.31 180)
+			(uuid "c230f8a9-d969-4634-ae67-2ae8cdd8ba1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 24.13 69.85 180)
+			(uuid "a223e893-c779-40af-9237-f6206cd6dc44")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 24.13 59.69 180)
+			(uuid "cb8b64e6-eb8f-465f-be36-a6139efefbdd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "2")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 115.57 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "243be2d0-a4e8-4a5c-8c93-adc2a4222a77")
+		(property "Sheetname" "Periph Board 5"
+			(at 115.57 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 115.57 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 115.57 57.15 180)
+			(uuid "01a8f2ce-413d-47ee-a354-8f44686e63e8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 129.54 57.15 0)
+			(uuid "e913e07a-47f0-42ab-b850-88df78a4bc6a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 115.57 62.23 180)
+			(uuid "55574e96-49e7-4075-9397-213ac9d54637")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 115.57 64.77 180)
+			(uuid "352196b0-923d-4521-a0a6-b4791cdefcfa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 115.57 67.31 180)
+			(uuid "993d2af4-559b-4b1e-97f6-59df6e998d5f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 115.57 69.85 180)
+			(uuid "56b49a21-a4ba-4696-93db-fbc316055c54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 115.57 59.69 180)
+			(uuid "fee00961-cb2c-4c24-8fb5-53b308c0a56e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "7")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 44.45 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5b0a4642-144e-4945-bf5c-6d00013df1a8")
+		(property "Sheetname" "Periph Board 2"
+			(at 44.45 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 44.45 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 44.45 57.15 180)
+			(uuid "d46d61fe-56d3-47a3-90d1-7d0c1da92f7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 58.42 57.15 0)
+			(uuid "c5ed0ba6-b97b-4b0f-96be-31d5e1528140")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 44.45 62.23 180)
+			(uuid "9182a162-af71-4627-abe2-e6dc4f68587b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 44.45 64.77 180)
+			(uuid "b89daf26-ad3e-4faf-8136-185eace6c524")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 44.45 67.31 180)
+			(uuid "479bc05d-e9d4-48ea-b109-e40698f3b8c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 44.45 69.85 180)
+			(uuid "c1a446da-fd71-4404-aa00-85357be3babf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 44.45 59.69 180)
+			(uuid "7fa88bb8-b10b-4f1b-86c2-da5e09fe57b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "4")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 95.25 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a0a99868-89e0-4883-a19f-c13e806883a3")
+		(property "Sheetname" "Periph Board 4"
+			(at 95.25 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 95.25 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 95.25 57.15 180)
+			(uuid "f25ce520-1a2e-4f30-a2d4-f19ad26eaf51")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 109.22 57.15 0)
+			(uuid "d3c1777e-f235-4ceb-865a-f65712f58e84")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 95.25 62.23 180)
+			(uuid "797c0550-7bcc-41ae-9679-5fd751aa30f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 95.25 64.77 180)
+			(uuid "bd259ba5-d40d-4fca-8184-80326c864b35")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 95.25 67.31 180)
+			(uuid "15250dca-f5d9-4297-a626-ff918d405f55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 95.25 69.85 180)
+			(uuid "97a348a3-5b15-4961-90ce-963b091156dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 95.25 59.69 180)
+			(uuid "275cbfd3-986a-4064-8a91-17415c7fdb8b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "6")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 64.77 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c23f013f-c172-44ea-a430-b28a1dc4e997")
+		(property "Sheetname" "Periph Board 3"
+			(at 64.77 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 64.77 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 64.77 57.15 180)
+			(uuid "c209ffe5-159a-4ce3-b894-bec832fef0d6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 78.74 57.15 0)
+			(uuid "7485b07c-905f-4538-b522-8823c74ebbd3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 64.77 62.23 180)
+			(uuid "932d1c9e-ce7f-439b-b630-88e6776bcd92")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 64.77 64.77 180)
+			(uuid "a77f38da-744c-47cb-b745-d3fd35d5b40a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 64.77 67.31 180)
+			(uuid "94dd6e7f-8748-4379-b236-82c0a9d5d60f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 64.77 69.85 180)
+			(uuid "521abfb5-b5f7-4d40-944f-152ad507a97a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 64.77 59.69 180)
+			(uuid "721a4055-aff9-4c22-9c1f-2ad69497e3da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "5")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 135.89 54.61)
+		(size 13.97 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e7648fdc-6fe1-4c81-b7ae-e7734f0e7539")
+		(property "Sheetname" "Periph Board 6"
+			(at 135.89 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "P_BOARD_INT.kicad_sch"
+			(at 135.89 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "CS" input
+			(at 135.89 57.15 180)
+			(uuid "4f6042a5-49eb-4e69-9977-ebb747bdd428")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MISO" input
+			(at 149.86 57.15 0)
+			(uuid "637dc30b-d740-44f5-9d32-a282b3b371df")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "S0" input
+			(at 135.89 62.23 180)
+			(uuid "f6bc89ea-b727-4f39-9105-2af404232c9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S1" input
+			(at 135.89 64.77 180)
+			(uuid "99b4fcf9-e7c1-487e-8975-c6d15b33079a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S2" input
+			(at 135.89 67.31 180)
+			(uuid "18443b7d-6a0e-4ac0-80dd-365c2c4d91b2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "S3" input
+			(at 135.89 69.85 180)
+			(uuid "90ec6d08-44dd-4466-9f0a-8f1cc46cf9f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCK" input
+			(at 135.89 59.69 180)
+			(uuid "f66d0ebb-fc73-4f7a-a74a-cf0812d207eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
+					(page "8")
+				)
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/5f6e8c8b-8839-490d-945a-17905525bfda"
+					(page "20")
+				)
+			)
+		)
+	)
+)
