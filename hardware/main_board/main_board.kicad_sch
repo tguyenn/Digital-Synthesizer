@@ -141,15 +141,25 @@
 		)
 		(uuid "27172180-c0fd-4a3d-86f6-6b3b2b9c3a44")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 138.43 80.01) (xy 148.59 80.01)
+			(xy 148.59 80.01) (xy 138.43 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b7ccbde-1332-41e1-8b26-b8c71c7e7167")
+		(uuid "29cd0fc7-3d83-4d84-a911-aa103f83b097")
+	)
+	(bus
+		(pts
+			(xy 158.75 57.15) (xy 148.59 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b4587c2-ce0a-476c-8f2f-90a3cc612201")
 	)
 	(bus
 		(pts
@@ -160,6 +170,26 @@
 			(type default)
 		)
 		(uuid "2c119014-fd64-46fb-b41b-ae0f6e82cb96")
+	)
+	(bus
+		(pts
+			(xy 146.05 54.61) (xy 158.75 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3009a1b4-5d9d-4a4d-b270-1a5a715fcb59")
+	)
+	(bus
+		(pts
+			(xy 148.59 57.15) (xy 148.59 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31c271d0-c3d8-40f0-9f29-327b5f434978")
 	)
 	(wire
 		(pts
@@ -181,16 +211,6 @@
 		)
 		(uuid "42fc46ca-e53a-46c0-a086-8ee946d06aca")
 	)
-	(wire
-		(pts
-			(xy 148.59 60.96) (xy 158.75 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55d02812-1f5d-443a-bca5-1c52e2de9d3e")
-	)
 	(bus
 		(pts
 			(xy 146.05 97.79) (xy 146.05 116.84)
@@ -200,6 +220,16 @@
 			(type default)
 		)
 		(uuid "5ddc7b4c-4cc5-4394-8d9e-8942db394853")
+	)
+	(bus
+		(pts
+			(xy 138.43 77.47) (xy 146.05 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a85c12b-2193-4081-9e42-acfcf2dfaea3")
 	)
 	(wire
 		(pts
@@ -231,16 +261,6 @@
 		)
 		(uuid "8724d758-cc27-42ad-9681-67e34f3abc5a")
 	)
-	(bus
-		(pts
-			(xy 146.05 77.47) (xy 146.05 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a479933-f668-449f-8f8b-8e2df5e29934")
-	)
 	(wire
 		(pts
 			(xy 138.43 86.36) (xy 158.75 86.36)
@@ -261,16 +281,6 @@
 		)
 		(uuid "97faaf82-8b86-458a-a24d-03b003faec26")
 	)
-	(bus
-		(pts
-			(xy 138.43 77.47) (xy 146.05 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3fc6263-6c61-47f2-aec8-e9c31f85f8e4")
-	)
 	(wire
 		(pts
 			(xy 138.43 95.25) (xy 149.86 95.25)
@@ -283,16 +293,6 @@
 	)
 	(bus
 		(pts
-			(xy 146.05 58.42) (xy 158.75 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae17d590-e9d0-4b4d-9f34-bf4aa010bd7c")
-	)
-	(bus
-		(pts
 			(xy 138.43 97.79) (xy 146.05 97.79)
 		)
 		(stroke
@@ -300,16 +300,6 @@
 			(type default)
 		)
 		(uuid "aecd5fe9-c77f-4143-b419-5d83dbd25f6a")
-	)
-	(wire
-		(pts
-			(xy 148.59 80.01) (xy 148.59 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b432c4ac-b4a2-4d7d-abbb-90ab8b10fd94")
 	)
 	(wire
 		(pts
@@ -343,6 +333,16 @@
 	)
 	(bus
 		(pts
+			(xy 146.05 77.47) (xy 146.05 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8969719-420b-4846-a273-1922c13b71bf")
+	)
+	(bus
+		(pts
 			(xy 114.3 91.44) (xy 114.3 129.54)
 		)
 		(stroke
@@ -373,7 +373,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 261.62 146.05 0)
+		(at 261.62 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -382,7 +382,7 @@
 		(fields_autoplaced yes)
 		(uuid "5543e665-20d8-4df2-802d-c87ffd0228d9")
 		(property "Reference" "H4"
-			(at 264.16 144.7799 0)
+			(at 264.16 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -391,7 +391,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 264.16 147.3199 0)
+			(at 264.16 157.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -399,8 +399,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 261.62 146.05 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 261.62 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -409,7 +409,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 261.62 146.05 0)
+			(at 261.62 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -418,7 +418,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 261.62 146.05 0)
+			(at 261.62 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -463,7 +463,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 261.62 146.05 0)
 			(effects
 				(font
@@ -527,7 +527,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 261.62 140.97 0)
 			(effects
 				(font
@@ -591,7 +591,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 261.62 151.13 0)
 			(effects
 				(font
@@ -622,70 +622,6 @@
 			(project ""
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(reference "H3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 261.62 156.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fce3c112-f71e-4c2a-b0c3-45ee6ea578c9")
-		(property "Reference" "H5"
-			(at 264.16 154.9399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 264.16 157.4799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 261.62 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 261.62 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 261.62 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
-					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -795,26 +731,6 @@
 				(justify left)
 			)
 		)
-		(pin "ENC{ENC}" input
-			(at 138.43 77.47 0)
-			(uuid "77ee6a00-b4ef-44a3-93cf-39b80fdd1ea4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ENC_TOGGLE" output
-			(at 138.43 80.01 0)
-			(uuid "f5babb89-36a4-46d7-b6ae-d2c62f7ca76a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "I2C0{I2C}" bidirectional
 			(at 118.11 88.9 180)
 			(uuid "74cdef31-8a95-46ce-93f5-14165c85e734")
@@ -823,6 +739,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "ENC1{ENC}" output
+			(at 138.43 77.47 0)
+			(uuid "0e69a5cd-03f9-4945-9ea4-b5c0987effdb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ENC2{ENC}" output
+			(at 138.43 80.01 0)
+			(uuid "76619934-84fd-466b-b33e-d08083b325cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -1033,9 +969,9 @@
 				(justify left top)
 			)
 		)
-		(pin "ENC{ENC}" output
-			(at 158.75 58.42 180)
-			(uuid "a618140a-c176-4fd9-9b84-359283ade629")
+		(pin "ENC1{ENC}" output
+			(at 158.75 54.61 180)
+			(uuid "b15f28f3-5c11-485c-a0c9-167f59a4f88f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1043,9 +979,9 @@
 				(justify left)
 			)
 		)
-		(pin "ENC_TOGGLE" input
-			(at 158.75 60.96 180)
-			(uuid "f3e618ba-9dd2-4673-8942-a54b306321e9")
+		(pin "ENC2{ENC}" output
+			(at 158.75 57.15 180)
+			(uuid "50d2aecc-ae44-4e28-8928-383cefd67dab")
 			(effects
 				(font
 					(size 1.27 1.27)

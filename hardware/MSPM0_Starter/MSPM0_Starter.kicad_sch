@@ -2288,22 +2288,10 @@
 		(uuid "07d2bd1f-057a-4dd1-b9d1-c29a9b65b4ef")
 	)
 	(junction
-		(at 271.78 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f3425d4-a474-4bec-a5b5-57c996323d19")
-	)
-	(junction
 		(at 44.45 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "170d03f4-427f-404e-b7f5-ff8024604af4")
-	)
-	(junction
-		(at 271.78 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1fa2d225-5087-4a8c-aa5d-9aafc074a3bd")
 	)
 	(junction
 		(at 29.21 48.26)
@@ -2372,6 +2360,12 @@
 		(uuid "7d9c7e54-8427-402d-a09c-41b6a1fe706f")
 	)
 	(junction
+		(at 271.78 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ebd4a6d-d388-4674-b9f9-e0867eee060a")
+	)
+	(junction
 		(at 33.655 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2394,18 +2388,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d87f647e-2ae1-401b-b27e-f87590c56dd4")
-	)
-	(junction
-		(at 255.27 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea1e46b9-ee86-4746-898c-933af05e9c1e")
-	)
-	(junction
-		(at 255.27 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ec499b38-6292-4ffe-b662-43a0e69dd9c3")
 	)
 	(junction
 		(at 119.38 60.96)
@@ -2561,16 +2543,6 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 55.88) (xy 255.27 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dbfd3c9-3ba2-44c7-8e93-05bf5ae3d9e5")
-	)
-	(wire
-		(pts
 			(xy 82.55 25.4) (xy 82.55 33.02)
 		)
 		(stroke
@@ -2588,16 +2560,6 @@
 			(type default)
 		)
 		(uuid "2fefed5d-3d2e-4994-ad73-b9e2a0bf631a")
-	)
-	(wire
-		(pts
-			(xy 255.27 53.34) (xy 267.97 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33481dfb-511b-4b3d-96f4-38cca1cb8454")
 	)
 	(wire
 		(pts
@@ -2751,23 +2713,13 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 53.34) (xy 255.27 53.34)
+			(xy 238.76 53.34) (xy 267.97 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "69c47812-1f43-435c-a7a3-e704159e8f9a")
-	)
-	(wire
-		(pts
-			(xy 257.81 60.96) (xy 255.27 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f6df323-8625-49e3-8239-073729498950")
 	)
 	(wire
 		(pts
@@ -2851,16 +2803,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 43.18) (xy 274.32 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9132638b-8e7e-4350-9d2f-59ebd2f6584b")
-	)
-	(wire
-		(pts
 			(xy 149.86 44.45) (xy 149.86 58.42)
 		)
 		(stroke
@@ -2868,16 +2810,6 @@
 			(type default)
 		)
 		(uuid "921857b0-cc72-4d1e-ba2d-055143d3f391")
-	)
-	(wire
-		(pts
-			(xy 255.27 58.42) (xy 255.27 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98c5a322-40af-47d5-8ee4-9c260ce075f0")
 	)
 	(wire
 		(pts
@@ -2991,16 +2923,6 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 58.42) (xy 255.27 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd2526fa-f3ff-49c1-b9da-3bd2f534ba71")
-	)
-	(wire
-		(pts
 			(xy 37.465 33.02) (xy 44.45 33.02)
 		)
 		(stroke
@@ -3081,7 +3003,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 58.42) (xy 267.97 58.42)
+			(xy 238.76 58.42) (xy 267.97 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3128,16 +3050,6 @@
 			(type default)
 		)
 		(uuid "eb6f34a5-f84c-4afa-9adb-33369a5e3b9f")
-	)
-	(wire
-		(pts
-			(xy 271.78 44.45) (xy 271.78 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec593ba2-d0b7-4851-adf2-e394b76c67b9")
 	)
 	(wire
 		(pts
@@ -3198,16 +3110,6 @@
 			(type default)
 		)
 		(uuid "f6214b09-a557-43e9-a4a2-32e51644d52d")
-	)
-	(wire
-		(pts
-			(xy 255.27 55.88) (xy 255.27 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f74db799-d7df-4c5e-a553-eb3ffb8e1f48")
 	)
 	(label "+3_7V"
 		(at 33.02 33.02 180)
@@ -3329,28 +3231,6 @@
 			)
 		)
 	)
-	(global_label "PA21"
-		(shape passive)
-		(at 257.81 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "23089627-5b24-40d1-9a4b-57eab62d5c86")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 264.4615 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PA25{slash}SPI1_CS3"
 		(shape passive)
 		(at 238.76 48.26 0)
@@ -3364,28 +3244,6 @@
 		(uuid "2e6a390e-e7e0-498f-b70d-b4771e499e13")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 255.6924 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PA23"
-		(shape passive)
-		(at 257.81 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "30329b73-4727-471b-90a1-b7edbdf7afdc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 264.4615 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3857,28 +3715,6 @@
 			)
 		)
 	)
-	(global_label "DAC_REF"
-		(shape passive)
-		(at 274.32 43.18 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ca5badb3-355d-4178-9cf1-d2ebba5d8394")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.409 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PA16{slash}SPI1_POCI"
 		(shape passive)
 		(at 238.76 71.12 0)
@@ -4335,7 +4171,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 271.78 67.31 0)
+		(at 271.78 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4343,7 +4179,7 @@
 		(dnp no)
 		(uuid "346f6d89-63c2-4632-b468-dae2ece84d4a")
 		(property "Reference" "#PWR035"
-			(at 271.78 73.66 0)
+			(at 271.78 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4352,7 +4188,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 275.336 69.088 0)
+			(at 275.336 61.468 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4360,7 +4196,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 271.78 67.31 0)
+			(at 271.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4369,7 +4205,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.78 67.31 0)
+			(at 271.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4378,7 +4214,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 271.78 67.31 0)
+			(at 271.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5293,76 +5129,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 271.78 48.26 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "9ced56a1-f4e0-4059-b558-6f3589f7dcaf")
-		(property "Reference" "R16"
-			(at 270.002 47.0478 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "0"
-			(at 270.002 49.4721 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 270.002 48.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 271.78 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 271.78 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca9378d6-ed72-4e01-9e79-1b3b49074a1a")
-		)
-		(pin "2"
-			(uuid "71ac8d70-b935-4dd3-ae29-71d12306eb9f")
-		)
-		(instances
-			(project "Lab6"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 82.55 25.4 0)
 		(unit 1)
@@ -6192,76 +5958,6 @@
 			(project "Lab6"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 271.78 63.5 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "ecfc3cee-e230-4c74-9de2-6b24065a3ed9")
-		(property "Reference" "R14"
-			(at 270.002 62.2878 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "0"
-			(at 270.002 64.7121 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 270.002 63.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 271.78 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 271.78 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a087315a-0ba7-49bd-badc-4cfa6a1150d0")
-		)
-		(pin "2"
-			(uuid "c53d7a2c-4546-40e4-8226-efd6424b37bf")
-		)
-		(instances
-			(project "Lab6"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
-					(reference "R14")
 					(unit 1)
 				)
 			)
