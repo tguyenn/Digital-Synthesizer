@@ -10,7 +10,7 @@
 #include "../inc/ST7735.h"
 #include "../inc/Clock.h"
 #include "../inc/LaunchPad.h"
-#include "../inc/TExaS.h"
+#include "../inc/Texas.h"
 #include "../inc/Timer.h"
 #include "../inc/ADC1.h"
 
@@ -57,8 +57,10 @@ int main(void){ // main1
   PLL_Init(); // set bus speed
   LaunchPad_Init();
   TExaS_Init(ADC1,5,0); //ADC1 channel 5, PB18, slidepot
+  ST7735_InitR(INITR_REDTAB);
   __enable_irq();
   while(1){
+    ST7735_FillScreen(ST7735_BLACK);
   }
 }
 // // if you have a voltmeter/scope,
