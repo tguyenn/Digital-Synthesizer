@@ -1576,6 +1576,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 57.15 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0032cb65-1ff1-4362-9c39-89849e0a8835")
 		)
@@ -1764,6 +1773,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 133.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bc2182cd-0103-446e-b0a6-9394fe90ec37")
 		)
@@ -1837,6 +1855,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 83.82 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 83.82 107.95 0)
 			(effects
 				(font
@@ -2030,6 +2057,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 57.15 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ead91c62-8154-419b-ad98-e27b8e0e20c6")
 		)
@@ -2168,6 +2204,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 121.92 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 121.92 57.15 0)
 			(effects
 				(font
@@ -2385,6 +2430,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 83.82 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1052d715-aee4-43d1-9a37-3d08983e32ba")
 		)
@@ -2529,6 +2583,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 45.72 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f8547069-62c4-4a5f-9754-350b0491c886")
 		)
@@ -2646,6 +2709,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
+			(at 95.25 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -2835,6 +2907,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
+			(at 133.35 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -3093,6 +3174,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 95.25 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "34ab5599-2f8e-4169-932c-f895c2489c95")
 		)
@@ -3279,6 +3369,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
+			(at 133.35 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -3471,6 +3570,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 95.25 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ee551729-cd30-4537-bf65-2f7a592f1b36")
 		)
@@ -3617,6 +3725,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 121.92 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5973d56a-bc4c-4c17-a3de-5ffc8c400e9c")
 		)
@@ -3734,6 +3851,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
+			(at 57.15 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -3860,6 +3986,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 57.15 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d3040252-9f37-4e71-892b-ece31dec19d5")
 		)
@@ -3983,6 +4118,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 133.35 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "53f85f05-827d-4897-b6da-a253c92f651f")
 		)
@@ -4064,6 +4208,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 45.72 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e84fe9b3-ce29-4889-be38-774bea69600a")
 		)
@@ -4134,6 +4287,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 121.92 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 121.92 31.75 0)
 			(effects
 				(font
@@ -4417,6 +4579,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 83.82 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c83f3144-b490-44c7-a01e-21d455ca2896")
 		)
@@ -4627,6 +4798,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Price/Inventory" ""
+			(at 83.82 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3b543578-bf08-458e-9a38-87f364c68002")
 		)
@@ -4697,6 +4877,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 45.72 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 45.72 82.55 0)
 			(effects
 				(font
@@ -4822,6 +5011,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
+			(at 95.25 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -4963,6 +5161,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 45.72 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 45.72 31.75 0)
 			(effects
 				(font
@@ -5237,6 +5444,15 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/KYOCERA-AVX/0805YC105KAT2A?qs=Ppq%252BQS%252B9qgKbltvIecMi5g%3D%3D"
+			(at 121.92 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Inventory" ""
 			(at 121.92 107.95 0)
 			(effects
 				(font

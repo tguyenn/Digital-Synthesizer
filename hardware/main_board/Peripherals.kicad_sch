@@ -971,6 +971,16 @@
 		)
 		(uuid "47278420-7a8f-4612-ba8d-92c32284ddf9")
 	)
+	(text "Peripheral PCBs will be daisy chained\nthrough protoboards"
+		(exclude_from_sim no)
+		(at 35.306 85.852 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7bfd7cbd-0516-47de-ad2a-35f403f8cac3")
+	)
 	(text "Leaving pin 1 unconnected\nin case silly goober plugs logic\nanalyzer in backwards"
 		(exclude_from_sim no)
 		(at 101.854 23.876 0)
@@ -1197,15 +1207,15 @@
 		)
 		(uuid "da2c9cde-6257-4490-9ba4-d423a05a0f32")
 	)
-	(label "SDA"
-		(at 26.67 59.69 180)
+	(label "I2C0.SCL"
+		(at 26.67 62.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "0bd637a7-2721-4a24-8eaf-f8335db16e9f")
+		(uuid "0c5e05a1-b2d0-4940-87c6-dbc3e9aae454")
 	)
 	(label "I2C0.SCL"
 		(at 68.58 33.02 180)
@@ -1257,6 +1267,16 @@
 		)
 		(uuid "3de2a0bb-2ca8-49cb-b866-8d386459771a")
 	)
+	(label "I2C0.SDA"
+		(at 26.67 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3f1c8084-64b6-441c-bdef-1d2617b8dcab")
+	)
 	(label "S0"
 		(at 27.94 24.13 0)
 		(effects
@@ -1296,16 +1316,6 @@
 			(justify right bottom)
 		)
 		(uuid "7ab80472-5901-4e23-af83-62d9a17fd003")
-	)
-	(label "SCL"
-		(at 26.67 62.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "83f35939-06f3-4006-b37a-5923187a6310")
 	)
 	(label "S2"
 		(at 26.67 69.85 180)

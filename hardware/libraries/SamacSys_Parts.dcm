@@ -66,4 +66,16 @@ K
 F https://datasheet.datasheetarchive.com/originals/distributors/DKDS-18/344792.pdf
 $ENDCMP
 #
+$CMP 373
+D Adafruit Accessories 2.1mm DC Barrel Jack Breadboard Friendly
+K
+F https://cdn-shop.adafruit.com/datasheets/21mmdcjackDatasheet.pdf
+$ENDCMP
+#
+$CMP LM2937ET-3.3_NOPB
+D 400mA and 500mA Voltage Regulator
+K
+F http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm2937
+$ENDCMP
+#
 #End Doc Library
