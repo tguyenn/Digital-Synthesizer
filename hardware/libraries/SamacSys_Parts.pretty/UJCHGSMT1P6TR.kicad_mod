@@ -349,7 +349,7 @@
 		(uuid "5e4db1ef-17ff-476c-9e63-3292aae9d1bd")
 	)
 	(embedded_fonts no)
-	(model "C:\\Users\\tobya\\Desktop\\ECE445L\\lab-7-and-10-rasists\\hardware\\libraries\\SamacSys_Parts.3dshapes\\UJC-H-G-SMT-1-P6-TR.stp"
+	(model "${KIPRJMOD}/../libraries/SamacSys_Parts.3dshapes/UJC-H-G-SMT-1-P6-TR.stp"
 		(offset
 			(xyz 0 1.350000004 1.710000012)
 		)

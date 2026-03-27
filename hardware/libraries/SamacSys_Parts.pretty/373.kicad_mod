@@ -31,7 +31,7 @@
   (pad 1 thru_hole rect (at 0.000 -0) (size 2.835 2.835) (drill 1.89) (layers *.Cu *.Mask))
   (pad 2 thru_hole circle (at 0.000 -6) (size 2.835 2.835) (drill 1.89) (layers *.Cu *.Mask))
   (pad 3 thru_hole circle (at -4.700 -3) (size 2.835 2.835) (drill 1.89) (layers *.Cu *.Mask))
-  (model "C:\\Users\\tobya\\Desktop\\ECE445L\\lab-7-and-10-rasists\\hardware\\libraries\\SamacSys_Parts.3dshapes\\373.stp"
+  (model "${KIPRJMOD}/../libraries/SamacSys_Parts.3dshapes/373.stp"
     (at (xyz -0.02362204818275 0.5251968564011 -0.025196849830507))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 -180))

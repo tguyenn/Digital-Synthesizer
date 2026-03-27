@@ -28,7 +28,7 @@
   (pad 1 smd rect (at -1.25 -0.95 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at -1.25 0.95 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
   (pad 3 smd rect (at 1.25 0 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
-  (model "C:\\Users\\tobya\\Desktop\\ECE445L\\final_project\\hardware\\libraries\\SamacSys_Parts.3dshapes\\AH49HNTR-G1.stp"
+  (model "${KIPRJMOD}/../libraries/SamacSys_Parts.3dshapes/AH49HNTR-G1.stp"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

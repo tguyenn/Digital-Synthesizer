@@ -57,7 +57,7 @@
   (pad 30 smd rect (at 2.212 -2.75 90) (size 0.3 1.425) (layers F.Cu F.Paste F.Mask))
   (pad 31 smd rect (at 2.212 -3.25 90) (size 0.3 1.425) (layers F.Cu F.Paste F.Mask))
   (pad 32 smd rect (at 2.212 -3.75 90) (size 0.3 1.425) (layers F.Cu F.Paste F.Mask))
-  (model "C:\\Users\\tobya\\Desktop\\ECE445L\\lab-7-and-10-rasists\\hardware\\libraries\\SamacSys_Parts.3dshapes\\M0L1306QDGS32RQ1.stp"
+  (model "${KIPRJMOD}/../libraries/SamacSys_Parts.3dshapes/M0L1306QDGS32RQ1.stp"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
