@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "starved_thermal|114915000|80288000|e7fe12ab-0093-4f15-8d94-009cb443116c|ceadac53-2a23-405f-8629-f9d59acc3300|F.Cu",
+          "This pin already has 2 connections to ground. Fill just didn't reach twice because of capacitor"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -131,7 +136,7 @@
         "min_hole_to_hole": 0.5,
         "min_microvia_diameter": 0.25,
         "min_microvia_drill": 0.15,
-        "min_resolved_spokes": 1,
+        "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,

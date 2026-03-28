@@ -6602,7 +6602,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 133.35 106.68 0)
 			(effects
 				(font
@@ -7096,7 +7096,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 77.47 156.21 0)
 			(effects
 				(font

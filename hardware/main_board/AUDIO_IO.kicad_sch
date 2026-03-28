@@ -1332,7 +1332,7 @@
 		)
 		(uuid ee376d3c-8481-448c-9dac-465dd67fe4e0)
 	)
-	(text "To be interfaced with laptop\nto load in custom sounds\n\nLPAD & Chip UART1 \nTX -> TX\nRX -> RX"
+	(text "To be interfaced with laptop\nto load in custom sounds\n\nnote that: \nLPAD TX -> Chip TX\nLPAD RX -> Chip RX"
 		(exclude_from_sim no)
 		(at 30.988 116.586 0)
 		(effects

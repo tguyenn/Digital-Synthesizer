@@ -3099,6 +3099,18 @@
 		(color 0 0 0 0)
 		(uuid "f8ff2766-ed18-48b7-9b8c-60158e346557")
 	)
+	(no_connect
+		(at 261.62 147.32)
+		(uuid "752f2a41-7bcd-4046-937e-89e40e9d955b")
+	)
+	(no_connect
+		(at 261.62 137.16)
+		(uuid "8def7d10-8b93-4fde-8a86-c3b8fc0240e0")
+	)
+	(no_connect
+		(at 261.62 157.48)
+		(uuid "97940bcd-bdc4-4bff-9b45-ab38014c241c")
+	)
 	(wire
 		(pts
 			(xy 137.16 39.37) (xy 148.59 39.37)
@@ -20815,71 +20827,6 @@
 		(uuid "f95d4968-a9f8-4844-9d38-e0575408d0d4")
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 261.62 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "02a04558-a8f6-44dc-b9ff-99554d12cdf5")
-		(property "Reference" "#PWR0123"
-			(at 261.62 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 265.684 159.004 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 261.62 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 261.62 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "44569c76-5314-4dc7-9ec0-628343ddce28")
-		)
-		(instances
-			(project "periph_board"
-				(path "/79c81e35-5d93-46ac-8618-81a3b824b0cd"
-					(reference "#PWR0123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 85.09 43.18 0)
 		(unit 1)
@@ -22055,7 +22002,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 177.8 66.04 0)
 			(effects
 				(font
@@ -22130,7 +22077,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 200.66 35.56 0)
 			(effects
 				(font
@@ -22468,7 +22415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 160.02 63.5 0)
 			(effects
 				(font
@@ -23903,7 +23850,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 208.28 30.48 0)
 			(effects
 				(font
@@ -24340,7 +24287,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 204.47 33.02 0)
 			(effects
 				(font
@@ -24755,71 +24702,6 @@
 			(project "periph_board"
 				(path "/79c81e35-5d93-46ac-8618-81a3b824b0cd"
 					(reference "C102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 261.62 147.32 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b7457984-c4b3-46d7-8579-948dd4376306")
-		(property "Reference" "#PWR0122"
-			(at 261.62 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 265.684 148.844 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 261.62 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 261.62 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1457756-d720-4264-8646-ef136a171f34")
-		)
-		(instances
-			(project "periph_board"
-				(path "/79c81e35-5d93-46ac-8618-81a3b824b0cd"
-					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
@@ -25601,7 +25483,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SamacSys_Parts:betterTestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "SamacSys_Parts:bettertestpoint2"
 			(at 196.85 38.1 0)
 			(effects
 				(font
@@ -25710,71 +25592,6 @@
 			(project ""
 				(path "/79c81e35-5d93-46ac-8618-81a3b824b0cd"
 					(reference "#PWR0105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 261.62 137.16 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e90e4d0e-56a1-460c-914e-ac3bb53daed8")
-		(property "Reference" "#PWR0121"
-			(at 261.62 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 265.684 138.684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 261.62 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 261.62 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e3fb8c00-77b7-4a8c-a51a-bee586e25cd1")
-		)
-		(instances
-			(project "periph_board"
-				(path "/79c81e35-5d93-46ac-8618-81a3b824b0cd"
-					(reference "#PWR0121")
 					(unit 1)
 				)
 			)

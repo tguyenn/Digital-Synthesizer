@@ -5,6 +5,145 @@
 	(uuid "aedc9b53-7997-4669-980c-0977130284e4")
 	(paper "A4")
 	(lib_symbols
+		(symbol "ECE445L:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "ECE445L:C_Axial_200mil"
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ECE445L:HiLetGo_ST7735R"
 			(pin_names
 				(offset 1.016)
@@ -1077,7 +1216,7 @@
 	)
 	(rectangle
 		(start 15.24 43.18)
-		(end 83.82 105.41)
+		(end 93.98 105.41)
 		(stroke
 			(width 0)
 			(type default)
@@ -1148,16 +1287,11 @@
 		)
 		(uuid "e176277a-b0a8-4bc6-85c2-f0d25f3c08e2")
 	)
-	(text "is it worth putting a decoupling capacitor on the LCD if\nare plannign to connect the LCD with flying wires?\nthis means the capacitor will be super far from the \ndestination IC"
-		(exclude_from_sim no)
-		(at 181.61 60.452 0)
-		(effects
-			(font
-				(size 5 5)
-				(color 255 0 59 1)
-			)
-		)
-		(uuid "e95824b6-b4de-4571-9612-4dd57d9b9f0d")
+	(junction
+		(at 81.28 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2feb74cc-a994-4cb8-9e0a-8584b2f9456d")
 	)
 	(junction
 		(at 76.2 80.01)
@@ -1166,10 +1300,28 @@
 		(uuid "58f67ce0-23e4-46c0-aa8c-2178e4a9d37d")
 	)
 	(junction
+		(at 76.2 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "97dbd5cc-eec6-4528-8a05-5c465b74a0b5")
+	)
+	(junction
+		(at 76.2 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb1cc2da-0c9e-44ce-a40c-0203492d7c04")
+	)
+	(junction
 		(at 76.2 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e5dc00ff-8046-4fae-85c9-915aaa756820")
+	)
+	(junction
+		(at 81.28 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa97f461-4d38-40dc-acb8-6dcf2582ad93")
 	)
 	(no_connect
 		(at 76.2 63.5)
@@ -1234,6 +1386,36 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 58.42) (xy 81.28 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d7ec0df-c8c5-43e7-a341-448064ba187c")
+	)
+	(wire
+		(pts
+			(xy 87.63 76.2) (xy 87.63 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "213ed849-6fc6-4eff-acc1-5017ff88486f")
+	)
+	(wire
+		(pts
+			(xy 81.28 71.12) (xy 81.28 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23f07273-5ba7-4f71-a13c-607c5d1437f4")
+	)
+	(wire
+		(pts
 			(xy 29.21 39.37) (xy 27.94 39.37)
 		)
 		(stroke
@@ -1244,6 +1426,36 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 63.5) (xy 87.63 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40093258-4fbb-420b-8d13-bd0547bb6c6f")
+	)
+	(wire
+		(pts
+			(xy 76.2 58.42) (xy 81.28 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ca4ae1e-a31e-40a9-bb11-05c6adace58f")
+	)
+	(wire
+		(pts
+			(xy 81.28 76.2) (xy 76.2 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7996a87e-bce6-4050-9ef8-20901df73b89")
+	)
+	(wire
+		(pts
 			(xy 29.21 31.75) (xy 27.94 31.75)
 		)
 		(stroke
@@ -1251,6 +1463,16 @@
 			(type default)
 		)
 		(uuid "7cda9953-fb5d-49be-85e8-fc23702ba818")
+	)
+	(wire
+		(pts
+			(xy 81.28 76.2) (xy 87.63 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cdb2b66-ccaa-4d22-9119-6bcecfdc90a7")
 	)
 	(bus
 		(pts
@@ -1341,6 +1563,16 @@
 			(type default)
 		)
 		(uuid "f543ee3e-ecca-4c10-b3ae-d804252f7940")
+	)
+	(wire
+		(pts
+			(xy 81.28 58.42) (xy 81.28 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7fe546d-263a-4433-b365-db22f49c455b")
 	)
 	(wire
 		(pts
@@ -1595,6 +1827,75 @@
 			(justify right)
 		)
 		(uuid "be89578c-d31a-4e2b-8c5f-589057b08207")
+	)
+	(symbol
+		(lib_id "ECE445L:C")
+		(at 87.63 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2426dbe5-635f-44c9-9307-5a8b0d922961")
+		(property "Reference" "C702"
+			(at 89.916 70.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 89.916 72.644 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 88.5952 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 87.63 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b0afae7-cafb-4738-a0bf-7a39e0079546")
+		)
+		(pin "2"
+			(uuid "245f4421-e180-4a1c-9291-8a292f6232f5")
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/f60196d5-a61c-416f-993a-faa1a0858c5e"
+					(reference "C702")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1879,6 +2180,75 @@
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/f60196d5-a61c-416f-993a-faa1a0858c5e"
 					(reference "J701")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ECE445L:C")
+		(at 81.28 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba2bccfb-90b3-4420-a8d9-108f76d92998")
+		(property "Reference" "C701"
+			(at 81.788 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 81.788 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 82.2452 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 81.28 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2c429bd-ac23-4b64-a65c-cfde9daf363d")
+		)
+		(pin "2"
+			(uuid "f9639dbb-70a9-4c77-bf93-96d25dbbcbd5")
+		)
+		(instances
+			(project "main_board"
+				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/f60196d5-a61c-416f-993a-faa1a0858c5e"
+					(reference "C701")
 					(unit 1)
 				)
 			)
