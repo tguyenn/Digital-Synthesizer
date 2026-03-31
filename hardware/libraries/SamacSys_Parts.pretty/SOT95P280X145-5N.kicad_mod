@@ -1,5 +1,5 @@
 (module "SOT95P280X145-5N" (layer F.Cu)
-  (descr "SOT-23-5")
+  (descr "sot-23")
   (tags "Integrated Circuit")
   (attr smd)
   (fp_text reference IC** (at 0 0) (layer F.SilkS)
@@ -30,7 +30,7 @@
   (pad 3 smd rect (at -1.25 0.95 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
   (pad 4 smd rect (at 1.25 0.95 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
   (pad 5 smd rect (at 1.25 -0.95 90) (size 0.6 1.2) (layers F.Cu F.Paste F.Mask))
-  (model "C:\\Users\\tobya\\Desktop\\ECE445L\\lab-7-and-10-rasists\\hardware\\libraries\\SamacSys_Parts.3dshapes\\SN74LV1T34DBVR.stp"
+  (model "C:\\Users\\tobya\\Desktop\\ECE445L\\lab-7-and-10-rasists\\hardware\\libraries\\SamacSys_Parts.3dshapes\\LM321LVIDBVR.stp"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

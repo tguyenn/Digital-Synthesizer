@@ -102,4 +102,10 @@ K
 F http://www.ti.com/lit/gpn/sn74lv1t34
 $ENDCMP
 #
+$CMP LM321LVIDBVR
+D 1-Channel Industry Standard Low Voltage Operational Amplifier
+K
+F http://www.ti.com/lit/gpn/lm321lv
+$ENDCMP
+#
 #End Doc Library
