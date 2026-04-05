@@ -181,4 +181,9 @@ examples/.gitignore
 RemoteSystemsTempFiles/
 .settings/
 .launches/
+<<<<<<< HEAD
 /.metadata/
+=======
+/.metadata/
+.theia/
+>>>>>>> proj-b/main
