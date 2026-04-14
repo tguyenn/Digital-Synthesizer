@@ -185,34 +185,5 @@ void UART_OutUHex(uint32_t number);
  */
 void UART_InitPrintf(void);
 
-
-/**
- * initialize UART1 for 115200 baud rate.
- * - PA8 = UART1 Tx out from MSPM0
- * - PA9 = UART1 Rx in to MSPM0
- *
- * @param none
- * @return none
- * @brief  Initialize UART1
-*/
-void UART1_Init(void);
-
-/**
- * Wait for new UART1 serial port input
- * @param none
- * @return char ASCII code for key typed
- * @brief input from UART1
- */
-char UART1_InChar(void);
-
-/**
- * Output 8-bit to UART1 serial port
- * @param data is an 8-bit ASCII character to be transferred
- * @return none
- * @brief output character to UART1
- */
-void UART1_OutChar(char data);
-
-
 #endif // __UART_H__
 /** @}*/
