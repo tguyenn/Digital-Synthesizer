@@ -8,11 +8,14 @@
 #include "../inc/Clock.h"
 #include "../inc/LaunchPad.h"
 #include "../inc/ST7735.h"
-#include "../inc/Texas.h"
+// #include "../inc/Texas.h"
 #include "../inc/Timer.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <ti/devices/msp/msp.h>
+
+#include "../lib/myUART.h"
+
 
 // ****note to ECE319K students****
 // the data sheet says the ADC does not work when clock is 80 MHz

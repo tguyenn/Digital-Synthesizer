@@ -32,7 +32,8 @@ void TIMG7_IRQHandler() {
   uint8_t count1 = (count & (1 << 1)) >> 1;
   uint8_t count2 = (count & (1 << 2)) >> 2;
   uint8_t count3 = (count & (1 << 3)) >> 3;
-  GPIOB->DOUT31_0 = (count0 << sel0) | (count1 << sel1) | (count2 << sel2) | (count3 << sel3);
+  GPIOB->DOUTCLR31_0 = (1 << sel0) | (1 << sel1) | (1 << sel2) | (1 << sel3);
+  GPIOB->DOUTSET31_0 = (count0 << sel0) | (count1 << sel1) | (count2 << sel2) | (count3 << sel3);
   count++;
 }
 
@@ -41,18 +42,17 @@ void initLED(void){
   IOMUX->SECCFG.PINCM[PA16INDEX] = 0x00000081;
   GPIOA->DOE31_0 |= 0x10000;
 
+  // init mux selection lines
   // PB24
   // PB20
   // PB4
   // PB3
-  GPIOB->DOE31_0 |= (1 << 24) | (1 << 20) | (1 << 4) | (1 << 3);
+  GPIOB->DOE31_0 |= (1 << sel0) | (1 << sel1) | (1 << sel2) | (1 << sel3);
   IOMUX->SECCFG.PINCM[PB24INDEX] = 0x00000081;
   IOMUX->SECCFG.PINCM[PB20INDEX] = 0x00000081;
   IOMUX->SECCFG.PINCM[PB4INDEX] = 0x00000081;
   IOMUX->SECCFG.PINCM[PB3INDEX] = 0x00000081;
 
-
-  // GPIOA->DOUTTGL31_0 = (1 << 16);
   TimerG7_IntArm(UINT16_MAX, 0, 0);
 }
 
@@ -65,6 +65,6 @@ int main(void){ // main1
   initUART();
   __enable_irq();
   while(1){
-    
+    readUART0();
   }
 }
