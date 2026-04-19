@@ -10,10 +10,10 @@
 #include "../inc/UART.h"
 #include "../lib/myUART.h"
 #include "../inc/DAC.h"
+#include "../lib/ledStrip.h"
 
 // Include your new abstraction layer
 #include "BoardConfig.h"
-#include "../inc/ti_msp_dl_config.h"
 
 
 const uint16_t Wave16[16] = {
@@ -90,7 +90,6 @@ int main(void){
   // initUART();
   // DAC_Init();
   // TimerG6_IntArm(10, 0, 0); 
-  
   __enable_irq();
   while(1){
     

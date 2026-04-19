@@ -2,7 +2,6 @@
 #include "../lib/ledStrip.h"
 #include "../inc/PWM.c"
 
-
 // run through velocity array
 // if velocity > some threshold, then trigger led pulse
 // TODO write function that scans 
@@ -10,6 +9,7 @@
 // TODO write DMA code that outputs the data buffer ledArr
 
 #define BUS_CLK 8
+#define DMA_TRANSFER_SIZE_WORDS (1)
 
 stripLed ledArr[60];
 
