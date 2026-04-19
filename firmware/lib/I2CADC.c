@@ -1,21 +1,25 @@
 #include "I2CADC.h"
+#include <ti/devices/msp/msp.h>
 
-uint16_t keyLastValue[TOTAL_KEYS]; // Stores previous ADC value
-uint32_t keyStartTime[TOTAL_KEYS]; // Stores time stamp when pressed
-uint8_t  keyIsPressed[TOTAL_KEYS]; // Boolean: is the key currently down?
+
+
+#define TOTAL_KEYS 60
+#define SEL0 24 
+#define SEL1 20
+#define SEL2 4
+#define SEL3 3
+
+#define PB24INDEX 49 // Ensure these indices match your datasheet
+#define PB20INDEX 42
+#define PB4INDEX 17
+#define PB3INDEX 16
 
 uint8_t addresses[5] = {0x48, 0x49, 0x4A, 0x4C,0x4D};
 
-typedef struct ADCoutput_t{
-    uint16_t velocity[60];
-    uint16_t position[60];
+struct ADCoutput_t {
+    uint16_t velocity[TOTAL_KEYS];
+    uint16_t position[TOTAL_KEYS];
 };
-
-void initADC(void){
-    initMux();
-    
-    
-}
 
 void initMux(void) {
   // LP PB24, PB20, PB4, PB3 -> S0, S1, S2, S3
@@ -33,9 +37,15 @@ void initMux(void) {
 //   IOMUX->SECCFG.PINCM[PA16INDEX] = 0x00000081;
 }
 
+void initADC(void){
+    initMux(); 
+}
+
+
+
 //gets msb and lsb via I2C from whatever data passed by muxes
 uint16_t readADC(int8_t address) {
-    uint8_t msb
+    uint8_t msb;
     uint8_t lsb;
     
     while((I2C1->MASTER.MSR & 0x20) == 0){}; 

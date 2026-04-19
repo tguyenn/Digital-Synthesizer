@@ -104,3 +104,38 @@ void PWM_SetDuty(uint32_t duty0, uint32_t duty1){
 }
 
 
+void initPWM_PA13(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, uint32_t duty) {
+    // 1. Power and Reset TIMG0
+    TIMG0->GPRCM.RSTCTL = (uint32_t)0xB1000003;
+    TIMG0->GPRCM.PWREN  = (uint32_t)0x26000001;
+    Clock_Delay(2); 
+
+    // 2. Configure Pin Mux for PA13 only
+    // Function 5 = TIMG0 CCP1 Output
+    IOMUX->SECCFG.PINCM[PA13INDEX] = 0x00000085; 
+
+    // 3. Clock Configuration
+    TIMG0->CLKSEL = timerClkSrc; 
+    TIMG0->CLKDIV = 0x00; 
+    TIMG0->COMMONREGS.CPS = timerClkPrescale; 
+
+    // 4. Timer Period and Mode
+    TIMG0->COUNTERREGS.LOAD   = period - 1;
+    TIMG0->COUNTERREGS.CTRCTL = 0x02; // Down-count mode, continuous
+
+    // 5. Channel Configuration (CCP1)
+    TIMG0->COUNTERREGS.CCCTL_01[1] = 0;      // Compare mode (not capture)
+    TIMG0->COMMONREGS.CCPD         = 0x02;      // Enable Output for CCP1 only (Bit 1)
+    TIMG0->COUNTERREGS.CC_01[1]    = duty;      // Set initial duty cycle
+    
+    // 6. Output Action (The "PWM" Logic)
+    // 0x0088: High on LOAD, Low on Compare Match (CDACT)
+    TIMG0->COUNTERREGS.CCACT_01[1] = 0x0088; 
+    
+    // 7. Enable Timer
+    TIMG0->COUNTERREGS.CTRCTL |= 0x01;
+}
+
+void setPWM_PA13(uint32_t duty){
+  TIMG0->COUNTERREGS.CC_01[1] = duty;
+}

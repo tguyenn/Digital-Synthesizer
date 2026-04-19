@@ -21,6 +21,8 @@ SSD1306 oLED
 #include <ti/devices/msp/msp.h>
 #include "../inc/I2C.h"
 #include "../inc/Clock.h"
+#define PA10INDEX 11
+#define PA11INDEX 12
 #define PA27INDEX 59
 #define PB2INDEX 14
 #define PB3INDEX 15

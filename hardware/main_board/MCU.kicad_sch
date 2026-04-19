@@ -3481,6 +3481,16 @@
 		)
 		(uuid "15686852-ffe4-4f89-9921-4ac9dae5b7aa")
 	)
+	(text "MOSI"
+		(exclude_from_sim no)
+		(at 134.874 139.192 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2a139866-ee67-41c8-b30c-7ea0cf00a767")
+	)
 	(text "LEDs"
 		(exclude_from_sim no)
 		(at 16.764 110.998 0)
@@ -3491,9 +3501,9 @@
 		)
 		(uuid "2e78ef94-5cd6-4019-b7ae-e44a02135bbf")
 	)
-	(text "Note that if you need an external UART0 connection to\nthe LPAD, you need to flip the connection\n\nChip UART0 is interfaced to LPAD UART0"
+	(text "Note that if you need an external UART0 connection to\nthe LPAD, you need to flip the connection\n\nChip RX -> LPAD TX\nChip TX -> LPAD RX"
 		(exclude_from_sim no)
-		(at 170.942 118.618 0)
+		(at 170.942 117.348 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3550,6 +3560,16 @@
 			)
 		)
 		(uuid "5ad7d05a-1852-467f-839d-7297e3a814da")
+	)
+	(text "MISO"
+		(exclude_from_sim no)
+		(at 134.874 141.478 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "67c30c0f-8e09-4b12-8654-9390d9cbf480")
 	)
 	(text "Hierarchical Labels"
 		(exclude_from_sim no)
@@ -3640,6 +3660,16 @@
 			)
 		)
 		(uuid "ea8d0700-1235-4fdc-a522-dc575c68bc2b")
+	)
+	(text "SCK"
+		(exclude_from_sim no)
+		(at 134.874 136.652 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fd0bd936-68e3-425a-a1be-5b6c18d45653")
 	)
 	(text_box "PA0/PA1 are open drain, 5V tolerant."
 		(exclude_from_sim no)
@@ -4210,7 +4240,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 106.68) (xy 170.18 106.68)
+			(xy 171.45 101.6) (xy 170.18 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4909,7 +4939,7 @@
 		(uuid "14c42609-f164-4417-ba78-7ed78882b4f1")
 	)
 	(label "UART0_CHIP_TX"
-		(at 170.18 104.14 0)
+		(at 170.18 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5059,7 +5089,7 @@
 		(uuid "3fb5245f-1c46-452f-b05f-49967d1578ed")
 	)
 	(label "UART0_CHIP_RX"
-		(at 170.18 101.6 0)
+		(at 170.18 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6988,7 +7018,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 165.1 104.14 0)
+		(at 165.1 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6996,7 +7026,7 @@
 		(dnp no)
 		(uuid "6b25f889-4ee7-47d7-b426-404c0ad54a13")
 		(property "Reference" "J301"
-			(at 156.21 104.14 0)
+			(at 156.21 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7004,7 +7034,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 156.21 106.68 0)
+			(at 156.21 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,7 +7042,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 165.1 104.14 0)
+			(at 165.1 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7021,7 +7051,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 104.14 0)
+			(at 165.1 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7030,7 +7060,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 165.1 104.14 0)
+			(at 165.1 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8553,7 +8583,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 106.68 0)
+		(at 171.45 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8562,7 +8592,7 @@
 		(fields_autoplaced yes)
 		(uuid "fe58f2f1-d564-427f-a22f-5ba6f7725879")
 		(property "Reference" "#PWR0314"
-			(at 171.45 113.03 0)
+			(at 171.45 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8571,7 +8601,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 111.76 0)
+			(at 171.45 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8579,7 +8609,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 106.68 0)
+			(at 171.45 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8588,7 +8618,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 106.68 0)
+			(at 171.45 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8597,7 +8627,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 106.68 0)
+			(at 171.45 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)

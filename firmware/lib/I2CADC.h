@@ -3,7 +3,10 @@
 
 #include <stdint.h>
 
-void ADCInit(void);
+void initADC(void);
+void initMux(void);
+uint16_t readADC(int8_t address);
+ 
 
 
 

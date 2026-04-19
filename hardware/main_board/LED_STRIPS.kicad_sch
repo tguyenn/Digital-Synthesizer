@@ -1254,17 +1254,6 @@
 		)
 		(uuid "7e5e470e-1e8c-4249-8e70-d1e804d161bc")
 	)
-	(text "I (Toby) fucked up and ordered the wrong level shifter lol\n\njust leave the footprint blank for now"
-		(exclude_from_sim no)
-		(at 162.814 50.8 0)
-		(effects
-			(font
-				(size 4 4)
-				(color 255 0 32 1)
-			)
-		)
-		(uuid "89d9d552-b36e-4735-9d61-ea2315bf24ff")
-	)
 	(text "Level Shifter (3V3 -> 5V)"
 		(exclude_from_sim no)
 		(at 27.432 27.686 0)

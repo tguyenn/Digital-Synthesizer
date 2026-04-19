@@ -2250,9 +2250,9 @@
 		)
 		(uuid "efa48d42-a65f-42f1-8c2c-87cbe5106677")
 	)
-	(text "Fuck Shit"
+	(text "Speaker in part 2"
 		(exclude_from_sim no)
-		(at 54.61 90.678 0)
+		(at 58.928 90.678 0)
 		(effects
 			(font
 				(size 1.27 1.27)

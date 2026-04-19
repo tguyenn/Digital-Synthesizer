@@ -56,6 +56,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/inc/LaunchPad.c</locationURI>
 		</link>
 		<link>
+			<name>PWM.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/inc/PWM.c</locationURI>
+		</link>
+		<link>
 			<name>SPI.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/inc/SPI.c</locationURI>
@@ -86,14 +91,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/inc/UARTbusywait.c</locationURI>
 		</link>
 		<link>
-			<name>encoder.c</name>
+			<name>ledStrip.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/lib/encoder.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/lib/ledStrip.c</locationURI>
 		</link>
 		<link>
 			<name>myUART.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/lib/myUART.c</locationURI>
+		</link>
+		<link>
+			<name>ti_msp_dl_config.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/inc/ti_msp_dl_config.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -86,6 +86,10 @@ void PWM_Init(uint32_t timerClkSrc, uint32_t timerClkPrescale,
  */			  
 void PWM_SetDuty(uint32_t duty0, uint32_t duty1);
 
+void initPWM_PA13(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, uint32_t duty);
+void setPWM_PA13(uint32_t duty);
+
+
 #endif // __PWM_H__
 /** @}*/
 
