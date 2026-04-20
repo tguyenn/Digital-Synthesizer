@@ -17,6 +17,7 @@
 // Include your new abstraction layer
 #include "BoardConfig.h"
 
+ ADCoutput_t adc_vals;
 
 const uint16_t Wave16[16] = {
   2048, 2441, 2772, 3004, 3072, 3004, 2772, 2441, 
@@ -78,7 +79,7 @@ void TIMG6_IRQHandler() {
 } 
 
 void TIMA1_IRQHandler(){
-  ADCoutput_t adc_vals = updateKeyVals();
+  adc_vals = updateKeyVals();
 }
 
 // void TIMG7_IRQHandler() {

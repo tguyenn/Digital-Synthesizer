@@ -29,12 +29,9 @@ void initADC(void){
 
 //gets msb and lsb via I2C from whatever data passed by muxes
 uint16_t readADC(uint8_t address) {
-// I2C_Recv2 returns a 16-bit value (MSB then LSB)
-    uint16_t rawData = I2C_Recv2(address);
+    uint16_t raw_data = I2C_Recv2(address);
     
-    // The MCP3221 is a 12-bit ADC. 
-    // The first 4 bits of the 16-bit transfer are 0.
-    return (rawData & 0x0FFF);
+    return (raw_data & 0x0FFF);
 }
 
 void incrementMux(void) {
@@ -43,15 +40,11 @@ void incrementMux(void) {
   if(count > 11) { // we only need 12 out of the 16 mux inputs
     count = 0;
   }
-  // uint8_t count0 = count & 1;
-  // uint8_t count1 = (count & (1 << 1)) >> 1;
-  // uint8_t count2 = (count & (1 << 2)) >> 2;
-  // uint8_t count3 = (count & (1 << 3)) >> 3;
-
-  uint8_t count0 = 0;
-  uint8_t count1 = 0;
-  uint8_t count2 = 0;
-  uint8_t count3 = 0;
+  
+  uint8_t count0 = count & 1;
+  uint8_t count1 = (count & (1 << 1)) >> 1;
+  uint8_t count2 = (count & (1 << 2)) >> 2;
+  uint8_t count3 = (count & (1 << 3)) >> 3;
   
   GPIOB->DOUTCLR31_0 = (1 << SEL0) | (1 << SEL1) | (1 << SEL2) | (1 << SEL3);
   GPIOB->DOUTSET31_0 = (count0 << SEL0) | (count1 << SEL1) | (count2 << SEL2) | (count3 << SEL3);
