@@ -62,6 +62,8 @@
 // PWMFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1) * period))
 // For example, source=LFCLK, prescale=0, period = 1000, PWM frequency = 32.768 Hz
 // For example, source=BUSCLK, 40MHz bus, prescale=19, period = 10000, PWM frequency = 10kHz
+
+// valvanoware. bad bc we dont need 2 pwm channels
 void PWM_Init(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, uint32_t duty0, uint32_t duty1){
   LaunchPad_Init(); // PB21 is input with internal pull up resistor
   TIMG0->GPRCM.RSTCTL = (uint32_t)0xB1000003;
@@ -98,44 +100,58 @@ void PWM_Init(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, 
   // bits 1-0 ZACT 00 for no action on zero event
   TIMG0->COUNTERREGS.CTRCTL |= 0x01;
 }
+// valvanoware. bad bc we dont need 2 pwm channels
 void PWM_SetDuty(uint32_t duty0, uint32_t duty1){
   TIMG0->COUNTERREGS.CC_01[0] = duty0;
   TIMG0->COUNTERREGS.CC_01[1] = duty1;
 }
 
-
-void initPWM_PA13(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, uint32_t duty) {
-    // 1. Power and Reset TIMG0
-    TIMG0->GPRCM.RSTCTL = (uint32_t)0xB1000003;
-    TIMG0->GPRCM.PWREN  = (uint32_t)0x26000001;
+// period is in clock cycles. TIMG6 for shadow loading
+void initPWM_TIMG6_PA13(uint32_t timerClkSrc, uint32_t timerClkPrescale, uint32_t period, uint32_t duty) {
+    // 1. Power and Reset TIMG6
+    // Note: Ensure the GPRCM power index matches TIMG6 for your specific package
+    TIMG6->GPRCM.RSTCTL = (uint32_t)0xB1000003;
+    TIMG6->GPRCM.PWREN  = (uint32_t)0x26000001;
     Clock_Delay(2); 
 
-    // 2. Configure Pin Mux for PA13 only
-    // Function 5 = TIMG0 CCP1 Output
-    IOMUX->SECCFG.PINCM[PA13INDEX] = 0x00000085; 
+    // 2. Configure Pin Mux for PA13
+    // On MSPM0G3507, PA13 for TIMG6 is usually Function 3 or 5. 
+    // Check your datasheet, but assuming Function 5 based on your TIMG0 code:
+    IOMUX->SECCFG.PINCM[13] = 0x00000085; 
 
     // 3. Clock Configuration
-    TIMG0->CLKSEL = timerClkSrc; 
-    TIMG0->CLKDIV = 0x00; 
-    TIMG0->COMMONREGS.CPS = timerClkPrescale; 
+    TIMG6->CLKSEL = timerClkSrc; 
+    TIMG6->CLKDIV = 0x00; 
+    TIMG6->COMMONREGS.CPS = timerClkPrescale; 
 
     // 4. Timer Period and Mode
-    TIMG0->COUNTERREGS.LOAD   = period - 1;
-    TIMG0->COUNTERREGS.CTRCTL = 0x02; // Down-count mode, continuous
+    TIMG6->COUNTERREGS.LOAD   = period - 1;
+    // Down-count mode, continuous. Set CTRCTL.REPEAT to 1.
+    TIMG6->COUNTERREGS.CTRCTL = 0x02; 
 
-    // 5. Channel Configuration (CCP1)
-    TIMG0->COUNTERREGS.CCCTL_01[1] = 0;      // Compare mode (not capture)
-    TIMG0->COMMONREGS.CCPD         = 0x02;      // Enable Output for CCP1 only (Bit 1)
-    TIMG0->COUNTERREGS.CC_01[1]    = duty;      // Set initial duty cycle
-    
-    // 6. Output Action (The "PWM" Logic)
-    // 0x0088: High on LOAD, Low on Compare Match (CDACT)
-    TIMG0->COUNTERREGS.CCACT_01[1] = 0x0088; 
-    
-    // 7. Enable Timer
-    TIMG0->COUNTERREGS.CTRCTL |= 0x01;
+    // 5. Enable Shadow Loading for CC1
+    // This is vital for DMA. LCONT (bit 16) = 1.
+    // It prevents the duty cycle from changing mid-pulse.
+    TIMG6->COUNTERREGS.CCCTL_01[1] = (1 << 16); 
+
+    // 6. Set up Event Publishing for DMA
+    // We want the DMA to trigger every time the timer reaches ZERO (the start of a new pulse)
+    TIMG6->GEN_EVENT0.IMASK = 0x01; // Zero event
+    TIMG6->FPUB_0 = 0x01;          // Publish to Event Channel 1
+    TIMG6->EVT_MODE = 0x01;        // Enable event publishing
+
+    // 7. Channel Configuration (CCP1)
+    // CCPD Bit 1 = 1 (Output), CCACT_01 defines PWM behavior
+    TIMG6->COMMONREGS.CCPD         = 0x02; 
+    TIMG6->COUNTERREGS.CC_01[1]    = duty; 
+    // Action: Set on Load, Clear on Compare (standard PWM)
+    TIMG6->COUNTERREGS.CCACT_01[1] = 0x0088; 
+
+    // 8. Enable Timer
+    TIMG6->COUNTERREGS.CTRCTL |= 0x01;
 }
 
-void setPWM_PA13(uint32_t duty){
-  TIMG0->COUNTERREGS.CC_01[1] = duty;
-}
+// // manual. todo: DMA instead
+// void setPWM_PA13(uint32_t duty){
+//   TIMG->COUNTERREGS.CC_01[1] = duty;
+// }

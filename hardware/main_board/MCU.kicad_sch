@@ -3481,9 +3481,9 @@
 		)
 		(uuid "15686852-ffe4-4f89-9921-4ac9dae5b7aa")
 	)
-	(text "MOSI"
+	(text "SPI1.MOSI"
 		(exclude_from_sim no)
-		(at 134.874 139.192 0)
+		(at 135.636 138.938 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3561,9 +3561,9 @@
 		)
 		(uuid "5ad7d05a-1852-467f-839d-7297e3a814da")
 	)
-	(text "MISO"
+	(text "SPI1.MISO"
 		(exclude_from_sim no)
-		(at 134.874 141.478 0)
+		(at 135.636 141.224 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3661,9 +3661,9 @@
 		)
 		(uuid "ea8d0700-1235-4fdc-a522-dc575c68bc2b")
 	)
-	(text "SCK"
+	(text "SPI1.SCK"
 		(exclude_from_sim no)
-		(at 134.874 136.652 0)
+		(at 135.636 136.398 0)
 		(effects
 			(font
 				(size 1.27 1.27)

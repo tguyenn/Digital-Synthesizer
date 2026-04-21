@@ -46,11 +46,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/inc/I2C.c</locationURI>
 		</link>
 		<link>
-			<name>I2CADC.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/lib/I2CADC.c</locationURI>
-		</link>
-		<link>
 			<name>LaunchPad.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/inc/LaunchPad.c</locationURI>
@@ -96,14 +91,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/lib/ledStrip.c</locationURI>
 		</link>
 		<link>
-			<name>myUART.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/lib/myUART.c</locationURI>
-		</link>
-		<link>
-			<name>ti_msp_dl_config.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/inc/ti_msp_dl_config.c</locationURI>
+			<name>lib</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/lib</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

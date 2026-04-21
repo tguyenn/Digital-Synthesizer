@@ -34,7 +34,7 @@
  *  ============ ti_msp_dl_config.c =============
  *  Configured MSPM0 DriverLib module definitions
  *
- *  DO NOT EDIT - This file is generated for the LP_MSPM0G3507
+ *  DO NOT EDIT - This file is generated for the MSPM0G350X
  *  by the SysConfig tool.
  */
 
@@ -51,6 +51,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     /* Module-Specific Initializations*/
     SYSCFG_DL_SYSCTL_init();
     SYSCFG_DL_DMA_init();
+    SYSCFG_DL_DAC12_init();
 }
 
 SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
@@ -58,24 +59,17 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_reset(GPIOA);
     DL_GPIO_reset(GPIOB);
 
+    DL_DAC12_reset(DAC0);
 
     DL_GPIO_enablePower(GPIOA);
     DL_GPIO_enablePower(GPIOB);
 
+    DL_DAC12_enablePower(DAC0);
     delay_cycles(POWER_STARTUP_DELAY);
 }
 
 SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 {
-
-    DL_GPIO_initDigitalOutput(GPIO_LEDS_USER_LED_1_IOMUX);
-
-    DL_GPIO_initDigitalOutput(GPIO_LEDS_USER_TEST_IOMUX);
-
-    DL_GPIO_setPins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN |
-		GPIO_LEDS_USER_TEST_PIN);
-    DL_GPIO_enableOutput(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN |
-		GPIO_LEDS_USER_TEST_PIN);
 
 }
 
@@ -92,29 +86,49 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
 	/* Set default configuration */
 	DL_SYSCTL_disableHFXT();
 	DL_SYSCTL_disableSYSPLL();
+    DL_SYSCTL_enableMFPCLK();
+	DL_SYSCTL_setMFPCLKSource(DL_SYSCTL_MFPCLK_SOURCE_SYSOSC);
 
 }
 
 
 static const DL_DMA_Config gDMA_CH0Config = {
-    .transferMode   = DL_DMA_SINGLE_BLOCK_TRANSFER_MODE,
+    .transferMode   = DL_DMA_SINGLE_TRANSFER_MODE,
     .extendedMode   = DL_DMA_NORMAL_MODE,
-    .destIncrement  = DL_DMA_ADDR_INCREMENT,
+    .destIncrement  = DL_DMA_ADDR_UNCHANGED,
     .srcIncrement   = DL_DMA_ADDR_INCREMENT,
-    .destWidth      = DL_DMA_WIDTH_WORD,
-    .srcWidth       = DL_DMA_WIDTH_WORD,
-    .trigger        = DMA_CH0_TRIGGER_SEL_SW,
+    .destWidth      = DL_DMA_WIDTH_HALF_WORD,
+    .srcWidth       = DL_DMA_WIDTH_HALF_WORD,
+    .trigger        = DAC12_INST_DMA_TRIGGER,
     .triggerType    = DL_DMA_TRIGGER_TYPE_EXTERNAL,
 };
 
 SYSCONFIG_WEAK void SYSCFG_DL_DMA_CH0_init(void)
 {
-    DL_DMA_clearInterruptStatus(DMA, DL_DMA_INTERRUPT_CHANNEL0);
-    DL_DMA_enableInterrupt(DMA, DL_DMA_INTERRUPT_CHANNEL0);
     DL_DMA_initChannel(DMA, DMA_CH0_CHAN_ID , (DL_DMA_Config *) &gDMA_CH0Config);
 }
 SYSCONFIG_WEAK void SYSCFG_DL_DMA_init(void){
     SYSCFG_DL_DMA_CH0_init();
 }
 
+
+static const DL_DAC12_Config gDAC12Config = {
+    .outputEnable              = DL_DAC12_OUTPUT_ENABLED,
+    .resolution                = DL_DAC12_RESOLUTION_12BIT,
+    .representation            = DL_DAC12_REPRESENTATION_BINARY,
+    .voltageReferenceSource    = DL_DAC12_VREF_SOURCE_VDDA_VSSA,
+    .amplifierSetting          = DL_DAC12_AMP_ON,
+    .fifoEnable                = DL_DAC12_FIFO_ENABLED,
+    .fifoTriggerSource         = DL_DAC12_FIFO_TRIGGER_SAMPLETIMER,
+    .dmaTriggerEnable          = DL_DAC12_DMA_TRIGGER_ENABLED,
+    .dmaTriggerThreshold       = DL_DAC12_FIFO_THRESHOLD_TWO_QTRS_EMPTY,
+    .sampleTimeGeneratorEnable = DL_DAC12_SAMPLETIMER_ENABLE,
+    .sampleRate                = DL_DAC12_SAMPLES_PER_SECOND_16K,
+};
+SYSCONFIG_WEAK void SYSCFG_DL_DAC12_init(void)
+{
+    DL_DAC12_init(DAC0, (DL_DAC12_Config *) &gDAC12Config);
+    DL_DAC12_enableInterrupt(DAC0, (DL_DAC12_INTERRUPT_DMA_DONE));
+    DL_DAC12_enable(DAC0);
+}
 

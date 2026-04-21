@@ -34,13 +34,13 @@
  *  ============ ti_msp_dl_config.h =============
  *  Configured MSPM0 DriverLib module declarations
  *
- *  DO NOT EDIT - This file is generated for the LP_MSPM0G3507
+ *  DO NOT EDIT - This file is generated for the MSPM0G350X
  *  by the SysConfig tool.
  */
 #ifndef ti_msp_dl_config_h
 #define ti_msp_dl_config_h
 
-#define CONFIG_LP_MSPM0G3507
+#define CONFIG_MSPM0G350X
 #define CONFIG_MSPM0G3507
 
 #if defined(__ti_version__) || defined(__TI_COMPILER_VERSION__)
@@ -81,18 +81,17 @@ extern "C" {
 
 /* Defines for DMA_CH0 */
 #define DMA_CH0_CHAN_ID                                                      (0)
-#define DMA_CH0_TRIGGER_SEL_SW                               (DMA_SOFTWARE_TRIG)
+#define DAC12_INST_DMA_TRIGGER                          (DMA_DAC0_EVT_BD_1_TRIG)
 
 
-/* Port definition for Pin Group GPIO_LEDS */
-#define GPIO_LEDS_PORT                                                   (GPIOA)
 
-/* Defines for USER_LED_1: GPIOA.0 with pinCMx 1 on package pin 33 */
-#define GPIO_LEDS_USER_LED_1_PIN                                 (DL_GPIO_PIN_0)
-#define GPIO_LEDS_USER_LED_1_IOMUX                                (IOMUX_PINCM1)
-/* Defines for USER_TEST: GPIOA.15 with pinCMx 37 on package pin 8 */
-#define GPIO_LEDS_USER_TEST_PIN                                 (DL_GPIO_PIN_15)
-#define GPIO_LEDS_USER_TEST_IOMUX                                (IOMUX_PINCM37)
+/* Defines for DAC12 */
+#define DAC12_IRQHandler                                         DAC0_IRQHandler
+#define DAC12_INT_IRQN                                           (DAC0_INT_IRQn)
+#define GPIO_DAC12_OUT_PORT                                                GPIOA
+#define GPIO_DAC12_OUT_PIN                                        DL_GPIO_PIN_15
+#define GPIO_DAC12_IOMUX_OUT                                     (IOMUX_PINCM37)
+#define GPIO_DAC12_IOMUX_OUT_FUNC                   IOMUX_PINCM37_PF_UNCONNECTED
 
 
 /* clang-format on */
@@ -102,7 +101,7 @@ void SYSCFG_DL_initPower(void);
 void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_DMA_init(void);
-
+void SYSCFG_DL_DAC12_init(void);
 
 
 #ifdef __cplusplus

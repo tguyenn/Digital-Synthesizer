@@ -5,19 +5,22 @@
 #include "../inc/Clock.h"
 #include "../inc/LaunchPad.h"
 #include "../inc/Timer.h"
-#include "../inc/ADC1.h"
+// #include "../inc/ADC1.h"
+// #include "../inc/ST7735.h"
+// #include "../inc/UART.h"
+// #include "../lib/myUART.h"
+// #include "../inc/DAC.h"
+// #include "../lib/ledStrip.h"
+// #include "../inc/I2C.h"
+// #include "../lib/I2CADC.h"
 #include "../inc/ST7735.h"
-#include "../inc/UART.h"
-#include "../lib/myUART.h"
-#include "../inc/DAC.h"
-#include "../lib/ledStrip.h"
-#include "../inc/I2C.h"
-#include "../lib/I2CADC.h"
 
 // Include your new abstraction layer
+#include "../lib/ti_msp_dl_config.h"
+#include "../lib/Audio_DAC_DMA.h"
 #include "BoardConfig.h"
 
- ADCoutput_t adc_vals;
+// ADCoutput_t adc_vals;
 
 const uint16_t Wave16[16] = {
   2048, 2441, 2772, 3004, 3072, 3004, 2772, 2441, 
@@ -35,51 +38,21 @@ void initHeart(void){
   TimerG7_IntArm(UINT16_MAX, 0, 0);
 }
 
-// void initMux(void) {
-//   MUX_PORT->DOE31_0 |= (1 << MUX_SEL0_PIN) | (1 << MUX_SEL1_PIN) | 
-//                        (1 << MUX_SEL2_PIN) | (1 << MUX_SEL3_PIN);
-                       
-//   IOMUX->SECCFG.PINCM[MUX_SEL0_IOMUX] = 0x00000081;
-//   IOMUX->SECCFG.PINCM[MUX_SEL1_IOMUX] = 0x00000081;
-//   IOMUX->SECCFG.PINCM[MUX_SEL2_IOMUX] = 0x00000081;
-//   IOMUX->SECCFG.PINCM[MUX_SEL3_IOMUX] = 0x00000081;
-// }
-
 void initLCD(void) {
-  ST7735_InitR(INITR_REDTAB);
+  // ST7735_InitR(INITR_REDTAB);
 }
-
-// void incrementMux(void) {
-//   static uint8_t count = 0;
-//   if(count > 12) { 
-//     count = 0;
-//   }
-  
-//   uint8_t count0 = count & 1;
-//   uint8_t count1 = (count & (1 << 1)) >> 1;
-//   uint8_t count2 = (count & (1 << 2)) >> 2;
-//   uint8_t count3 = (count & (1 << 3)) >> 3;
-
-//   // Clear all 4 mux pins, then set the new state
-//   MUX_PORT->DOUTCLR31_0 = (1 << MUX_SEL0_PIN) | (1 << MUX_SEL1_PIN) | 
-//                           (1 << MUX_SEL2_PIN) | (1 << MUX_SEL3_PIN);
-                          
-//   MUX_PORT->DOUTSET31_0 = (count0 << MUX_SEL0_PIN) | (count1 << MUX_SEL1_PIN) | 
-//                           (count2 << MUX_SEL2_PIN) | (count3 << MUX_SEL3_PIN);
-//   count++;
-// }
 
 void toggleHeart(void) {
   LED_PORT->DOUTTGL31_0 = (1 << LED_PIN); 
 }
 
-void TIMG6_IRQHandler() {
-  static uint16_t i = 0;
-  DAC0->DATA0 = Wave16[i++ % 16];
+void TIMG7_IRQHandler() {
+  toggleHeart();
 } 
 
+
 void TIMA1_IRQHandler(){
-  adc_vals = updateKeyVals();
+  // adc_vals = updateKeyVals();
 }
 
 // void TIMG7_IRQHandler() {
@@ -87,20 +60,40 @@ void TIMA1_IRQHandler(){
 //   toggleHeart();
 // }
 
+
 int main(void){ 
   __disable_irq();
-  PLL_Init(); 
-  LaunchPad_Init(); 
+  // PLL_Init(); 
+  // LaunchPad_Init();
+  SYSCFG_DL_init();
+  // SYSCFG_DL_DAC12_init();
+  // SYSCFG_DL_DMA_init();
  // initHeart();
-  I2C_Init();
-  initADC();
+  // I2C_Init();
+  // initADC();
   // initLCD();
   // initUART();
   // DAC_Init();
   // TimerG6_IntArm(10, 0, 0); 
-  TimerA1_IntArm(1800, 0, 1);
+  // TimerA1_IntArm(1800, 0, 1);
+  // initHeart();
+  // initADC();
+  // initLCD();
+  // initUART();
+  // I2C_Init();
+  // DAC_Init();
+  // initLedStrip();
+  // lmfao();
+    // TimerG0_IntArm(UINT16_MAX, 0, 0);
+    // ST7735_InitR(INITR_REDTAB);
+   // I2C_Recv2(0x48);
+  Audio_DAC_DMA_Init();
   __enable_irq();
   while(1){
-   // I2C_Recv2(0x48);
+    // ST7735_FillScreen(ST7735_BLUE);
+    for (int i = 0; i < 800000; i++) {
+      
+    }
+    Audio_DAC_DMA_swap();
   }
 }

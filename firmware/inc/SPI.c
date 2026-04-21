@@ -6,24 +6,28 @@ SPI MKII LCD
 J1.7  SPI1 SCLK  PB9_SPI1-SCK
 J2.13 SPI1 CS0   PB6_SPI1-CS0
 J2.15 SPI1 PICO  PB8_SPI1-PICO
-J2.17 LCD !RST   PB15
-J4.31 LCD RS     PA13
+JX.XX LCD !RST   PA18
+J4.31 LCD RS     PB0
  */
-
 
 #include <ti/devices/msp/msp.h>
 #include "../inc/SPI.h"
 #include "../inc/Clock.h"
+
 #define PB9INDEX 25
 #define PB6INDEX 22
 #define PB8INDEX 24
-#define PB15INDEX 31
-#define PA13INDEX 34
+#define PB0INDEX 11  
+#define PA18INDEX 40 // Standard IOMUX PINCM index for PA18
+
+#define PB7INDEX 23
+
 // calls Clock_Freq to get bus clock
 // initialize SPI for 8 MHz baud clock
 // busy-wait synchronization
 // SPI0,SPI1 in power domain PD1 SysClk equals bus CPU clock
-void SPI_Init(void){uint32_t busfreq =  Clock_Freq();
+void SPI_Init(void){
+  uint32_t busfreq =  Clock_Freq();
     // assumes GPIOA and GPIOB are reset and powered previously
     // RSTCLR to SPI1 peripherals
     //   bits 31-24 unlock key 0xB1
@@ -35,17 +39,21 @@ void SPI_Init(void){uint32_t busfreq =  Clock_Freq();
     //   bits 31-24 unlock key 0x26
     //   bit 0 is Enable Power
   SPI1->GPRCM.PWREN = 0x26000001;
+  
   // configure PB9 PB6 PB8 as alternate SPI1 function
   IOMUX->SECCFG.PINCM[PB9INDEX]  = 0x00000083;  // SPI1 SCLK
   IOMUX->SECCFG.PINCM[PB6INDEX]  = 0x00000083;  // SPI1 CS0
   IOMUX->SECCFG.PINCM[PB8INDEX]  = 0x00000083;  // SPI1 PICO
-  IOMUX->SECCFG.PINCM[PB15INDEX] = 0x00000081;  // GPIO output, LCD !RST
-  IOMUX->SECCFG.PINCM[PA13INDEX] = 0x00000081;  // GPIO output, LCD RS
+  // IOMUX->SECCFG.PINCM[PA18INDEX] = 0x00000081;  // GPIO output, LCD !RST
+  IOMUX->SECCFG.PINCM[PB0INDEX]  = 0x00000081;  // GPIO output, LCD RS (D/C)
+  
   Clock_Delay(24); // time for gpio to power up
-  GPIOA->DOE31_0 |= 1<<13;    // PA13 is LCD RS
-  GPIOB->DOE31_0 |= 1<<15;    // PB15 is LCD !RST
-  GPIOA->DOUTSET31_0 = 1<<13; // RS=1
-  GPIOB->DOUTSET31_0 = 1<<15; // !RST = 1
+  
+  GPIOB->DOE31_0 |= 1<<0;     // PB0 is LCD RS
+  // GPIOA->DOE31_0 |= 1<<18;    // PA18 is LCD !RST
+  GPIOB->DOUTSET31_0 = 1<<0;  // RS=1
+  // GPIOA->DOUTSET31_0 = 1<<18; // !RST = 1
+  
   SPI1->CLKSEL = 8; // SYSCLK
 // bit 3 SYSCLK
 // bit 2 MFCLK
@@ -87,8 +95,9 @@ void SPI_Init(void){uint32_t busfreq =  Clock_Freq();
 // bit 2=1 CP controller mode
 // bit 1=0 LBM disable loop back
 // bit 0=1 enable SPI
-  SPI_Reset();
+  // SPI_Reset();
 }
+
 /* STAT register
  * 4 BUSY 0h = SPI is in idle mode. 1h = SPI is currently transmitting and/or receiving data, or transmit FIFO is not empty.
    3 RNF Receive FIFO not full 0h = Receive FIFO is full. 1h = Receive FIFO is not full.
@@ -102,16 +111,17 @@ void SPI_Init(void){uint32_t busfreq =  Clock_Freq();
 // Output: none
 void SPI_OutData(char data){
   while((SPI1->STAT&0x02) == 0x00){}; // spin if TxFifo full
-  GPIOA->DOUTSET31_0 = 1<<13;         // RS=PA13=1 for data
+  GPIOB->DOUTSET31_0 = 1<<0;          // RS=PB0=1 for data
   SPI1->TXDATA = data;
 }
+
  //---------SPI_OutCommand------------
  // Output 8-bit command to SPI port
  // Input: data is an 8-bit data to be transferred
  // Output: none
  void SPI_OutCommand(char command){
    while((SPI1->STAT&0x10) == 0x10){}; // spin if SPI busy
-   GPIOA->DOUTCLR31_0 = 1<<13;         // RS=PA13=0 for command
+   GPIOB->DOUTCLR31_0 = 1<<0;          // RS=PB0=0 for command
    SPI1->TXDATA = command;
    while((SPI1->STAT&0x10) == 0x10){}; // spin if SPI busy
  }
@@ -122,11 +132,10 @@ void SPI_OutData(char data){
  // Output: none
  // at 48 MHz
  void SPI_Reset(void){
-   GPIOB->DOUTSET31_0 = 1<<15; // PB15=!RST=1
+   GPIOA->DOUTSET31_0 = 1<<18; // PA18=!RST=1
    Clock_Delay1ms(500);        // 500ms (calibrated with logic analyzer)
-   GPIOB->DOUTCLR31_0 = 1<<15; // PB15=!RST=0
+   GPIOA->DOUTCLR31_0 = 1<<18; // PA18=!RST=0
    Clock_Delay1ms(500);        // 500ms
-   GPIOB->DOUTSET31_0 = 1<<15; // PB15=!RST=1
+   GPIOA->DOUTSET31_0 = 1<<18; // PA18=!RST=1
    Clock_Delay1ms(500);        // 500ms
  }
-
