@@ -44,15 +44,15 @@ void SPI_Init(void){
   IOMUX->SECCFG.PINCM[PB9INDEX]  = 0x00000083;  // SPI1 SCLK
   IOMUX->SECCFG.PINCM[PB6INDEX]  = 0x00000083;  // SPI1 CS0
   IOMUX->SECCFG.PINCM[PB8INDEX]  = 0x00000083;  // SPI1 PICO
-  IOMUX->SECCFG.PINCM[PA18INDEX] = 0x00000081;  // GPIO output, LCD !RST
+  // IOMUX->SECCFG.PINCM[PA18INDEX] = 0x00000081;  // GPIO output, LCD !RST
   IOMUX->SECCFG.PINCM[PB0INDEX]  = 0x00000081;  // GPIO output, LCD RS (D/C)
   
   Clock_Delay(24); // time for gpio to power up
   
   GPIOB->DOE31_0 |= 1<<0;     // PB0 is LCD RS
-  GPIOA->DOE31_0 |= 1<<18;    // PA18 is LCD !RST
+  // GPIOA->DOE31_0 |= 1<<18;    // PA18 is LCD !RST
   GPIOB->DOUTSET31_0 = 1<<0;  // RS=1
-  GPIOA->DOUTSET31_0 = 1<<18; // !RST = 1
+  // GPIOA->DOUTSET31_0 = 1<<18; // !RST = 1
   
   SPI1->CLKSEL = 8; // SYSCLK
 // bit 3 SYSCLK
@@ -95,7 +95,7 @@ void SPI_Init(void){
 // bit 2=1 CP controller mode
 // bit 1=0 LBM disable loop back
 // bit 0=1 enable SPI
-  SPI_Reset();
+  // SPI_Reset();
 }
 
 /* STAT register
