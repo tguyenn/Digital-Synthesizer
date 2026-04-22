@@ -13,6 +13,7 @@
 // #include "../lib/ledStrip.h"
 // #include "../inc/I2C.h"
 // #include "../lib/I2CADC.h"
+#include "../lib/encoder.h"
 #include "../inc/ST7735.h"
 
 // Include your new abstraction layer
@@ -55,21 +56,18 @@ void TIMA1_IRQHandler(){
   // adc_vals = updateKeyVals();
 }
 
-// void TIMG7_IRQHandler() {
-//   incrementMux();
-//   toggleHeart();
-// }
+
 
 
 int main(void){ 
   __disable_irq();
-  // PLL_Init(); 
-  // LaunchPad_Init();
-  SYSCFG_DL_init();
+  PLL_Init(); 
+  LaunchPad_Init();
+  //SYSCFG_DL_init();
+  encoderInit();
   // SYSCFG_DL_DAC12_init();
   // SYSCFG_DL_DMA_init();
  // initHeart();
-  // I2C_Init();
   // initADC();
   // initLCD();
   // initUART();
@@ -87,13 +85,13 @@ int main(void){
     // TimerG0_IntArm(UINT16_MAX, 0, 0);
     // ST7735_InitR(INITR_REDTAB);
    // I2C_Recv2(0x48);
-  Audio_DAC_DMA_Init();
+  //Audio_DAC_DMA_Init();
   __enable_irq();
   while(1){
     // ST7735_FillScreen(ST7735_BLUE);
-    for (int i = 0; i < 800000; i++) {
+    // for (int i = 0; i < 800000; i++) {
       
-    }
-    Audio_DAC_DMA_swap();
+    // }
+    //Audio_DAC_DMA_swap();
   }
 }
