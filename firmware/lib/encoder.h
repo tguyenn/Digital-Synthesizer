@@ -3,6 +3,5 @@
 
 #include <stdint.h>
 
-void encoderInit(void);
 
 #endif

@@ -10,7 +10,6 @@
 // #include "../inc/ST7735.h"
 // #include "../inc/UART.h"
 // #include "../lib/myUART.h"
-// #include "../inc/DAC.h"
 // #include "../lib/ledStrip.h"
 // #include "../inc/I2C.h"
 // #include "../lib/I2CADC.h"
@@ -27,10 +26,7 @@
 
 // ADCoutput_t adc_vals;
 
-const uint16_t Wave16[16] = {2048, 2441, 2772, 3004, 3072, 3004, 2772, 2441,
-                             2048, 1655, 1324, 1092, 1024, 1092, 1324, 1655};
-
-void PLL_Init(void) {
+void PLL_Init(void) { 
   // Calls the correct clock function based on BoardConfig.h
   INIT_SYS_CLOCK();
 }
@@ -38,16 +34,14 @@ void PLL_Init(void) {
 void initHeart(void) {
   IOMUX->SECCFG.PINCM[LED_IOMUX] = 0x00000081;
   LED_PORT->DOE31_0 |= (1 << LED_PIN);
-  TimerG7_IntArm(UINT16_MAX, 0, 0);
-}
-
-void initLCD(void) {
-  // ST7735_InitR(INITR_REDTAB);
+  TimerG0_IntArm(UINT16_MAX, 0, 0);
 }
 
 void toggleHeart(void) { LED_PORT->DOUTTGL31_0 = (1 << LED_PIN); }
 
-void TIMG7_IRQHandler() { toggleHeart(); }
+void TIMG0_IRQHandler() {
+  toggleHeart();
+} 
 
 void TIMA1_IRQHandler() {
   // adc_vals = updateKeyVals();
@@ -55,46 +49,62 @@ void TIMA1_IRQHandler() {
 
 volatile int pingorpong = -1;
 
+/*// pls stop merge conflict 😔
+// int main(void) {
+//   __disable_irq();
+//   PLL_Init();
+//   LaunchPad_Init();
+//   SYSCFG_DL_init();
+//   // DAC_Init();
+//   encoderInit();
+//   // SYSCFG_DL_DAC12_init();
+//   // SYSCFG_DL_DMA_init();
+//   // initHeart();
+//   // initADC();
+//   // initLCD();
+//   // initUART();
+//   // TimerG6_IntArm(10, 0, 0);  
+//   // TimerA1_IntArm(1800, 0, 1);
+//   // I2C_Init();
+//   // initLedStrip();
+//   setupPingPongDMA();
+//   TimerG0_IntArm(UINT16_MAX, 0, 0);
+//   __enable_irq();
+//   while (1) {
+
+//     // Audio_DAC_DMA_Init();
+//     __enable_irq();
+//     while (1) {
+//       // ST7735_FillScreen(ST7735_BLUE);
+//       // for (int i = 0; i < 800000; i++) {
+
+//       // }
+//       // Audio_DAC_DMA_swap();
+//     }
+//   }
+// }
+*/
+
 int main(void) {
+  
+  
+  while(1) {
   __disable_irq();
   PLL_Init();
   LaunchPad_Init();
-  SYSCFG_DL_init();
-  // DAC_Init();
-  // SYSCFG_DL_init();
-  encoderInit();
-  // SYSCFG_DL_DAC12_init();
-  // SYSCFG_DL_DMA_init();
-  // initHeart();
-  // initADC();
-  // initLCD();
-  // initUART();
-  // DAC_Init();
-  // TimerG6_IntArm(10, 0, 0);
-  // TimerA1_IntArm(1800, 0, 1);
-  // initHeart();
-  // initADC();
-  // initLCD();
-  // initUART();
-  // I2C_Init();
-  // DAC_Init();
-  // initLedStrip();
-  // lmfao();
-  // TimerG0_IntArm(UINT16_MAX, 0, 0);
-  // ST7735_InitR(INITR_REDTAB);
-  // I2C_Recv2(0x48);
-  setupPingPongDMA();
+    
   __enable_irq();
-  while (1) {
+  }
+}
 
-    // Audio_DAC_DMA_Init();
-    __enable_irq();
-    while (1) {
-      // ST7735_FillScreen(ST7735_BLUE);
-      // for (int i = 0; i < 800000; i++) {
-
-      // }
-      // Audio_DAC_DMA_swap();
-    }
+int main2(void) {
+  
+  
+  while(1) {
+  __disable_irq();
+  PLL_Init();
+  LaunchPad_Init();
+    
+  __enable_irq();
   }
 }

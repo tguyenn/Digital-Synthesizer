@@ -1,7 +1,9 @@
-#include "ti_msp_dl_config.h" // dma
-#include "dma.h"
+#include "../inc/dl_config_led_strip.h"
+// #include "../inc/ti_msp_dl_config.h" // dma
+#include "../lib/DMA.h"
 
 #define CC01_REG 0x00001810 // address for capture compare register for PWM
+// ?
 
 void initDMA() {
     SYSCFG_DL_init();

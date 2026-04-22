@@ -1,7 +1,7 @@
 
-#include "ledStrip.h"
-#include "../inc/PWM.c"
-#include "dma.h"
+#include "../lib/ledStrip.h"
+#include "../inc/PWM.h"
+#include "../lib/DMA.h"
 
 // run through velocity array
 // if velocity > some threshold, then trigger led pulse
@@ -76,19 +76,19 @@ void pushColors() {
 }
 
 // blocking and bad 😔
-void WS2812B_SendByte(uint8_t byte) {
-    for (int i = 7; i >= 0; i--) {
-        if (byte & (1 << i)) {
-            setPWM_PA13(WS_1); // Using CCP1 (PA13)
-        } else {
-            setPWM_PA13(WS_0); // Using CCP1 (PA13)
-        }
-        // IMPORTANT: You need a way to wait for the timer to finish 
-        // one full cycle before changing the duty cycle again!
-        while(!(TIMG0->CPU_INT.RIS & 0x1)); // Wait for timer zero/load event
-        TIMG0->CPU_INT.ICLR = 0x1;           // Clear flag
-    }
-}
+// void WS2812B_SendByte(uint8_t byte) {
+//     for (int i = 7; i >= 0; i--) {
+//         if (byte & (1 << i)) {
+//             setPWM_PA13(WS_1); // Using CCP1 (PA13)
+//         } else {
+//             setPWM_PA13(WS_0); // Using CCP1 (PA13)
+//         }
+//         // IMPORTANT: You need a way to wait for the timer to finish 
+//         // one full cycle before changing the duty cycle again!
+//         while(!(TIMG0->CPU_INT.RIS & 0x1)); // Wait for timer zero/load event
+//         TIMG0->CPU_INT.ICLR = 0x1;           // Clear flag
+//     }
+// }
 
 void testLEDStrip(void) {
     for(int i = 0; i < NUM_LEDS; i++) {
