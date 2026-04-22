@@ -76,7 +76,7 @@ void setupPingPongDMA(void) {
                          DL_DMA_FULL_CH_REPEAT_SINGLE_TRANSFER_MODE);
 
   // 5. Configure the Trigger (e.g., a Timer to control sample rate)
-  DL_DMA_setSubscriberChanID(DMA, DMA_CH0_CHAN_ID, DL_DMA_SUBSCRIBER_INDEX_0);
+  DL_DMA_setSubscriberChanID(DMA, DL_DMA_SUBSCRIBER_INDEX_0, 0x0F); //Event channel 15
 
   // 6. Enable Interrupts (The Ping-Pong Secret Sauce)
   // Enable the Early IRQ at exactly half the transfer size to notify us the

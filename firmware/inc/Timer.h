@@ -57,7 +57,7 @@ void TIMG0_IRQHandler(void){
  */
 void TimerG0_IntArm(uint16_t period, uint32_t prescale, uint32_t priority);
 
-
+void TimerG0_EventArm(uint16_t period, uint32_t prescale);
 
 /**
  * Arm 16-bit periodic interrupts on Timer G8.
