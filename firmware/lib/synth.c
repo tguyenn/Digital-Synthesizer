@@ -2,6 +2,7 @@
 #include "Audio_DAC_DMA.h"
 #include "LookupTable.h"
 #include "Piano.h"
+#include "Envelope.h"
 
 const uint32_t Phase_Incs[NUM_KEYS] = {
     PHASE_INC(FREQ_C2),  PHASE_INC(FREQ_CS2), PHASE_INC(FREQ_D2),
@@ -59,9 +60,19 @@ void Release_Key(uint8_t key_idx) {
   Key_Actions[key_idx].update_me = true;
 }
 
-int16_t Inc_Key_State(uint8_t key_idx, Key_State *key_state) {
-  int16_t val = SineLUT[key_state->phase >> 22];
+int32_t Inc_Key_State(uint8_t key_idx, Key_State *key_state) {
+  uint32_t env_idx = key_state->time >> 10;
 
+  if (env_idx >= ENV_SIZE) {
+    Active_Keys[key_idx] = false;
+    return 0;                  // Return silence
+  }
+
+  int32_t val = PianoLUT[key_state->phase >> 22];
+  
+  val = (val * Envelope_LUT[env_idx]) >> 15;
+  
+  // Inc state
   key_state->time++;
   key_state->phase += Phase_Incs[key_idx];
 
