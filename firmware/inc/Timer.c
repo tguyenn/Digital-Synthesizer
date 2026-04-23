@@ -37,22 +37,6 @@ void TimerG0_IntArm(uint16_t period, uint32_t prescale, uint32_t priority) {
   TIMG0->COUNTERREGS.CTRCTL |= 0x01;
 }
 
-void TimerG0_EventArm(uint16_t period, uint32_t prescale) {
-  TIMG0->GPRCM.RSTCTL = 0xB1000003;
-  TIMG0->GPRCM.PWREN = 0x26000001;
-  Clock_Delay(24);                      // time for TimerG0 to power up
-  TIMG0->CLKSEL = 0x08;                 // bus clock
-  TIMG0->CLKDIV = 0x00;                 // divide by 1
-  TIMG0->COMMONREGS.CPS = prescale - 1; // divide by prescale,
-  TIMG0->COUNTERREGS.LOAD = period - 1; // set reload register
-  TIMG0->COUNTERREGS.CTRCTL = 0x02;
-  TIMG0->CPU_INT.IMASK = 0;     // No interrupt
-  TIMG0->GEN_EVENT0.IMASK = 1; // zero event mask
-  TIMG0->FPUB_0 = 0xF; // Channel ID 15
-  TIMG0->COMMONREGS.CCLKCTL = 1;
-  TIMG0->COUNTERREGS.CTRCTL |= 0x01;
-}
-
 // frequency = TimerClock/prescale/period
 void TimerG8_IntArm(uint16_t period, uint32_t prescale, uint32_t priority) {
   TIMG8->GPRCM.RSTCTL = 0xB1000003;

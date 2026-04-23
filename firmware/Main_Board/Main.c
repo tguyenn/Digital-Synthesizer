@@ -2,7 +2,6 @@
 #include <stdint.h>
 #include <stdio.h>
 
-
 #include "../inc/Clock.h"
 #include "../inc/LaunchPad.h"
 #include "../inc/Timer.h"
@@ -17,16 +16,14 @@
 #include "../inc/ST7735.h"
 #include "../lib/encoder.h"
 
-
 #include "../lib/Audio_DAC_DMA.h"
 #include "../lib/ti_msp_dl_config.h"
-
 
 #include "BoardConfig.h"
 
 // ADCoutput_t adc_vals;
 
-void PLL_Init(void) { 
+void PLL_Init(void) {
   // Calls the correct clock function based on BoardConfig.h
   INIT_SYS_CLOCK();
 }
@@ -39,9 +36,7 @@ void initHeart(void) {
 
 void toggleHeart(void) { LED_PORT->DOUTTGL31_0 = (1 << LED_PIN); }
 
-void TIMG0_IRQHandler() {
-  toggleHeart();
-} 
+void TIMG0_IRQHandler() { toggleHeart(); }
 
 void TIMA1_IRQHandler() {
   // adc_vals = updateKeyVals();
@@ -63,7 +58,7 @@ volatile int pingorpong = -1;
 //   // initADC();
 //   // initLCD();
 //   // initUART();
-//   // TimerG6_IntArm(10, 0, 0);  
+//   // TimerG6_IntArm(10, 0, 0);
 //   // TimerA1_IntArm(1800, 0, 1);
 //   // I2C_Init();
 //   // initLedStrip();
@@ -86,25 +81,25 @@ volatile int pingorpong = -1;
 */
 
 int main(void) {
-  
-  
-  while(1) {
   __disable_irq();
-  PLL_Init();
+  Clock_Init80MHz(0);
   LaunchPad_Init();
-    
+  DAC0_Init();
+  TimerG0_32kHz_EventArm();
+  DMA_Init_CircularPingPong();
   __enable_irq();
+  while (1) {
+    
   }
 }
 
 int main2(void) {
-  
-  
-  while(1) {
-  __disable_irq();
-  PLL_Init();
-  LaunchPad_Init();
-    
-  __enable_irq();
+
+  while (1) {
+    __disable_irq();
+    PLL_Init();
+    LaunchPad_Init();
+
+    __enable_irq();
   }
 }

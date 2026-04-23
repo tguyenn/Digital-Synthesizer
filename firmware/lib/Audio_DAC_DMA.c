@@ -1,12 +1,14 @@
 #include <stdint.h>
+#include <ti/devices/msp/msp.h>
 
-#include "../lib/ti_msp_dl_config.h"
+#include "../inc/LaunchPad.h"
+#include "../inc/Clock.h"
 #include "Audio_DAC_DMA.h"
 
-extern volatile int pingorpong;
+static volatile int refillPing;
+static volatile int refillPong;
 
-// Unified array holding both Ping (first half) and Pong (second half)
-volatile uint16_t waveBuffer[AUDIO_BUF_SIZE * 2] = {
+volatile uint16_t audioBuffer[AUDIO_TOTAL_SIZE] = {
     2047, 2097, 2147, 2198, 2248, 2298, 2347, 2397, 2446, 2496, 2544, 2593,
     2641, 2689, 2737, 2784, 2830, 2877, 2922, 2967, 3012, 3056, 3099, 3142,
     3184, 3226, 3266, 3306, 3346, 3384, 3422, 3458, 3494, 3530, 3564, 3597,
@@ -51,70 +53,108 @@ volatile uint16_t waveBuffer[AUDIO_BUF_SIZE * 2] = {
     1082, 1127, 1172, 1217, 1264, 1310, 1357, 1405, 1453, 1501, 1550, 1598,
     1648, 1697, 1747, 1796, 1846, 1896, 1947, 1997};
 
-void setupPingPongDMA(void) {
-  // 1. Configure Source and Destination Addresses
-  // Source is our unified buffer, Destination is the DAC data register
-  DL_DMA_setSrcAddr(DMA, DMA_CH0_CHAN_ID, (uint32_t)&waveBuffer[0]);
-  DL_DMA_setDestAddr(DMA, DMA_CH0_CHAN_ID, (uint32_t)&DAC0->DATA0);
+#define EVENT_ROUTE_1 1 // We will use Event Route 1 for the hardware trigger
 
-  // 2. Set Transfer Size to the FULL buffer
-  DL_DMA_setTransferSize(DMA, DMA_CH0_CHAN_ID,
-                         sizeof(waveBuffer) / sizeof(uint16_t));
+void TimerG0_32kHz_EventArm(void) {
+  // 1. Release the Timer from Reset (Do NOT assert it)
+  TIMG0->GPRCM.RSTCTL =
+      (GPTIMER_RSTCTL_KEY_UNLOCK_W | GPTIMER_RSTCTL_RESETSTKYCLR_CLR);
 
-  // 3. Set Addressing Modes
-  // Source increments to walk through the array.
-  // Destination is fixed because the DAC register doesn't move[cite: 108].
-  DL_DMA_configTransfer(
-      DMA, DMA_CH0_CHAN_ID, DL_DMA_FULL_CH_REPEAT_SINGLE_TRANSFER_MODE,
-      DL_DMA_NORMAL_MODE, DL_DMA_WIDTH_HALF_WORD, DL_DMA_WIDTH_HALF_WORD,
-      DL_DMA_ADDR_INCREMENT, DL_DMA_ADDR_UNCHANGED);
+  TIMG0->GPRCM.PWREN =
+      (GPTIMER_PWREN_KEY_UNLOCK_W | GPTIMER_PWREN_ENABLE_ENABLE);
+  Clock_Delay(24);
 
-  // 4. Set Transfer Mode to Repeated Single Transfer
-  // The DMA remains enabled; size and addresses auto-reload when size hits
-  // zero[cite: 202, 204, 208].
-  DL_DMA_setTransferMode(DMA, DMA_CH0_CHAN_ID,
-                         DL_DMA_FULL_CH_REPEAT_SINGLE_TRANSFER_MODE);
+  // 2. Clock Configuration (SYSCLK for TIMG0 in PD0 is 40 MHz)
+  TIMG0->CLKSEL = 0x08;      // Select SYSCLK
+  TIMG0->CLKDIV = 0x00;      // Divide by 1
+  TIMG0->COMMONREGS.CPS = 0; // Prescale = 1 (Value + 1)
 
-  // 5. Configure the Trigger (e.g., a Timer to control sample rate)
-  DL_DMA_setSubscriberChanID(DMA, DL_DMA_SUBSCRIBER_INDEX_0, 0x0F); //Event channel 15
+  // 3. Set the Period for 32,000 Hz using a 40 MHz clock!
+  // 40,000,000 / 32,000 = 1250. LOAD = 1250 - 1 = 1249.
+  TIMG0->COUNTERREGS.LOAD = 1249;
 
-  // 6. Enable Interrupts (The Ping-Pong Secret Sauce)
-  // Enable the Early IRQ at exactly half the transfer size to notify us the
-  // "Ping" half is done[cite: 398, 405].
-  DL_DMA_Full_Ch_setEarlyInterruptThreshold(
-      DMA, DMA_CH0_CHAN_ID, DL_DMA_EARLY_INTERRUPT_THRESHOLD_HALF);
-  DL_DMA_enableInterrupt(DMA, DL_DMA_FULL_CH_INTERRUPT_EARLY_CHANNEL0);
+  // 4. Configure Event Publishing
+  TIMG0->CPU_INT.IMASK = 0;
+  TIMG0->GEN_EVENT0.IMASK = GPTIMER_GEN_EVENT0_IMASK_Z_SET;
+  TIMG0->FPUB_0 = EVENT_ROUTE_1;
 
-  // Enable the standard channel interrupt for when the "Pong" half is done
-  // (size decrements to zero)[cite: 379, 380].
-  DL_DMA_enableInterrupt(DMA, DL_DMA_INTERRUPT_CHANNEL0);
+  // 5. Start the Timer in PERIODIC (Repeat) Mode
+  TIMG0->COMMONREGS.CCLKCTL = 1;
+  TIMG0->COUNTERREGS.CTRCTL =
+      (GPTIMER_CTRCTL_EN_ENABLED | GPTIMER_CTRCTL_CM_DOWN |
+       GPTIMER_CTRCTL_REPEAT_REPEAT_1); // Bit 4: REPEAT Enable
+}
 
-  // Enable the DMA channel
-  DL_DMA_enableChannel(DMA, DMA_CH0_CHAN_ID);
+void DAC0_Init(void) {
+  // 1. Release the DAC from Reset (Do NOT assert it)
+  DAC0->GPRCM.RSTCTL =
+      (DAC12_RSTCTL_KEY_UNLOCK_W | DAC12_RSTCTL_RESETSTKYCLR_CLR);
 
+  DAC0->GPRCM.PWREN = (DAC12_PWREN_KEY_UNLOCK_W | DAC12_PWREN_ENABLE_ENABLE);
+  Clock_Delay(24);
+
+  // 2. Configure PA15 for analog output
+  IOMUX->SECCFG.PINCM[PA15INDEX] = 0x00000080;
+
+  // 3. Configure DAC Control Registers
+  DAC0->CTL0 = (DAC12_CTL0_ENABLE_SET | DAC12_CTL0_RES__12BITS);
+
+  DAC0->CTL1 = (DAC12_CTL1_AMPEN_ENABLE | DAC12_CTL1_OPS_OUT0);
+}
+
+void DMA_Init_CircularPingPong() {
+  // Note: The MSPM0 DMA block does not have a local GPRCM power register
+  // like the timers or DAC. It is managed by SYSCTL.
+
+  // 1. Ensure Channel 0 is disabled before modifying registers
+  DMA->DMACHAN[0].DMACTL &= ~DMA_DMACTL_DMAEN_MASK;
+
+  // 2. Set Addresses and Transfer Size
+  DMA->DMACHAN[0].DMASA = (uint32_t)audioBuffer;
+  DMA->DMACHAN[0].DMADA =
+      (uint32_t)&(DAC0->DATA0); // Destination: DAC Data register
+  DMA->DMACHAN[0].DMASZ = AUDIO_TOTAL_SIZE;
+
+  // 3. Trigger Configuration (Subscribe to TimerG0 via Event Route 1)
+  // Connect Event Route 1 into DMA Subscriber Port 0
+  DMA->FSUB_0 = EVENT_ROUTE_1;
+
+  // Tell DMA Channel 0 to trigger whenever Subscriber Port 0 ticks
+  DMA->DMATRIG[0].DMATCTL = DMA_GENERIC_SUB0_TRIG;
+
+  // 4. Configure the Channel Control (DMACTL) Register
+  DMA->DMACHAN[0].DMACTL =
+      DMA_DMACTL_DMAPREIRQ_PREIRQ_HALF | // Automatically flag at exactly 50%
+      DMA_DMACTL_DMASRCWDTH_HALF |       // 16-bit source read
+      DMA_DMACTL_DMADSTWDTH_HALF |       // 16-bit destination write
+      DMA_DMACTL_DMASRCINCR_INCREMENT |  // Increment source array pointer
+      DMA_DMACTL_DMADSTINCR_UNCHANGED |  // DAC address never changes
+      DMA_DMACTL_DMATM_RPTSNGL |         // Repeated Single Transfer
+      DMA_DMACTL_DMAEN_ENABLE; // Enable Channel(Enable Full Interrupt)
+  DMA_DMACTL_DMAEN_ENABLE;     // Enable Channel
+
+  // 5. Enable DMA CPU Interrupts
+  // Enable the full transfer interrupt (DMACH0) and the early halfway interrupt
+  // (PREIRQ)
+  DMA->CPU_INT.IMASK =
+      (DMA_CPU_INT_IMASK_DMACH0_SET | DMA_CPU_INT_IMASK_PREIRQCH0_SET);
+
+  // Enable DMA Interrupt in Cortex-M0+ NVIC
   NVIC_EnableIRQ(DMA_INT_IRQn);
 }
 
+// ISR Name must match the vector table in your TI startup file
 void DMA_IRQHandler(void) {
-  // IIDX is automatically cleared when read, removing the pending flag[cite:
-  // 384].
-  switch (DL_DMA_getPendingInterrupt(DMA)) {
+  // Read the Interrupt Index (this automatically clears the flag)
+  uint32_t pending_irq = DMA->CPU_INT.IIDX;
 
-  case DL_DMA_FULL_CH_EVENT_IIDX_EARLY_IRQ_DMACH0:
-    // The DMA just finished the first half (Ping).
-    // It is currently reading from the second half (Pong).
-    // It is safe to synthesize new data into the first half.
-    pingorpong = 1;
-    break;
-
-  case DL_DMA_EVENT_IIDX_DMACH0:
-    // The DMA just finished the second half (Pong).
-    // The DMA has auto-reloaded and is now reading from the first half (Ping)
-    // again. It is safe to synthesize new data into the second half.
-    pingorpong = 0;
-    break;
-
-  default:
-    break;
+  if (pending_irq == DMA_CPU_INT_IIDX_STAT_PREIRQCH0) {
+    // Halfway mark reached (Early Interrupt).
+    // DMA is now actively reading the Pong half.
+    refillPing = true;
+  } else if (pending_irq == DMA_CPU_INT_IIDX_STAT_DMACH0) {
+    // Transfer complete (Full Interrupt).
+    // Pointer wrapped around. DMA is now actively reading the Ping half.
+    refillPong = true;
   }
 }
