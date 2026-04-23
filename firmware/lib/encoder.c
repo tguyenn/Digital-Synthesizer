@@ -7,6 +7,9 @@ volatile int32_t menu_pos = 0;
 int8_t menu_screen = 0;
 uint8_t volume = 0;
 
+volatile uint8_t update_menu = 0;
+volatile uint8_t update_screen_type = 0;
+
 void encoderInit(void){
     //ENC 1
     IOMUX->SECCFG.PINCM[PB16INDEX] = 0x00060081; // DT (PB16)
@@ -42,11 +45,10 @@ void GROUP1_IRQHandler(void) {
         if (menu_screen == 0){
             if (GPIOB->DIN31_0 & (1 << 16)) {
                 menu_pos--;
-                drawMenu();
             } else {
                 menu_pos++;
-                drawMenu();
             }
+            update_menu = 1;
         }
         }
         GPIOB->CPU_INT.ICLR = (1 << 15);
@@ -80,13 +82,11 @@ void GROUP1_IRQHandler(void) {
         if (!(GPIOB->DIN31_0 & (1 << 13))) {
             if (menu_screen == 1){
                 menu_screen = 0;
-                resetMenu();
-                drawMenu();
             }
             else {
             menu_screen = 1;
-            drawSelectedInstrument();
             }
+            update_screen_type = 1;
         }
         GPIOB->CPU_INT.ICLR = (1 << 13);
     }

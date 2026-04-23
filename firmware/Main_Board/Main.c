@@ -15,6 +15,7 @@
 #include "../inc/DAC.h"
 #include "../inc/ST7735.h"
 #include "../lib/encoder.h"
+#include "../lib/display.h"
 
 #include "../lib/Audio_DAC_DMA.h"
 #include "../lib/ti_msp_dl_config.h"
@@ -42,7 +43,6 @@ void TIMA1_IRQHandler() {
   // adc_vals = updateKeyVals();
 }
 
-volatile int pingorpong = -1;
 
 /*// pls stop merge conflict 😔
 // int main(void) {
@@ -80,7 +80,7 @@ volatile int pingorpong = -1;
 // }
 */
 
-int main(void) {
+int main1(void) {
   __disable_irq();
   Clock_Init80MHz(0);
   LaunchPad_Init();
@@ -93,13 +93,27 @@ int main(void) {
   }
 }
 
-int main2(void) {
-
-  while (1) {
+int main(void) {
     __disable_irq();
-    PLL_Init();
+    Clock_Init80MHz(0);
     LaunchPad_Init();
-
+    encoderInit();
+    initLCD();
     __enable_irq();
-  }
+    resetMenu();
+  while (1) {
+        if (update_screen_type) {
+            update_screen_type = 0; 
+            if (menu_screen == 0) {
+                resetMenu();
+                drawMenu();
+            } else {
+                drawSelectedInstrument();
+            }
+        }
+        if (update_menu) {
+            update_menu = 0;
+            drawMenu(); 
+        }
+}
 }
