@@ -80,8 +80,8 @@ void setMux(uint8_t channel) {
 #define RESTING_ADC_VAL 2110
 
 // Hysteresis thresholds to prevent bouncing/stuttering
-#define POS_ATTACK_THRESH 250  // How far down the key must be to trigger
-#define POS_RELEASE_THRESH 250 // Must lift up past this point to release
+#define POS_ATTACK_THRESH 240  // How far down the key must be to trigger
+#define POS_RELEASE_THRESH 240 // Must lift up past this point to release
 
 // Minimum speed required to trigger a note (rejects slow drifts/noise)
 #define MIN_ATTACK_VEL_THRESH 20

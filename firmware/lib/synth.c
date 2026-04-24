@@ -70,6 +70,7 @@ int32_t Inc_Key_State(uint8_t key_idx, Key_State *key_state) {
 
   int32_t val = PianoLUT[key_state->phase >> 22];
   
+  val = (val * Note_Gain[key_idx]) >> 15;
   val = (val * Envelope_LUT[env_idx]) >> 15;
   
   // Inc state
@@ -134,7 +135,7 @@ void Synth_Write_Buf() {
       sample += Inc_Key_State(key_idx, &Key_States[key_idx]);
     }
 
-    sample = sample / 5;
+    sample = sample / 4;
 
     if (sample > 2047) {
       sample = 2047;
