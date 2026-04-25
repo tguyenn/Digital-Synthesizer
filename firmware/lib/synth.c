@@ -44,8 +44,6 @@ typedef struct {
 
 Key_State Key_States[NUM_KEYS] = {0};
 bool Active_Keys[NUM_KEYS] = {false}; //shitty hash table
-
-// Interrupt access, desynced via Key_Actions
 Key_Action Key_Actions[NUM_KEYS] = {0};
 
 void Attack_Key(uint8_t key_idx, int16_t velocity) {
@@ -65,15 +63,11 @@ int32_t Inc_Key_State(uint8_t key_idx, Key_State *key_state) {
 
   if (env_idx >= ENV_SIZE) {
     Active_Keys[key_idx] = false;
-    return 0;                  // Return silence
+    return 0;
   }
-
   int32_t val = PianoLUT[key_state->phase >> 22];
-  
   val = (val * Note_Gain[key_idx]) >> 15;
   val = (val * Envelope_LUT[env_idx]) >> 15;
-  
-  // Inc state
   key_state->time++;
   key_state->phase += Phase_Incs[key_idx];
 
@@ -82,7 +76,6 @@ int32_t Inc_Key_State(uint8_t key_idx, Key_State *key_state) {
 
 void Synth_Write_Buf() {
   uint32_t offset = 0;
-
   if (refillPing) {
     offset = 0;
     refillPing = false;
@@ -95,41 +88,25 @@ void Synth_Write_Buf() {
 
   uint8_t active_indices[NUM_KEYS];
   uint8_t local_num_active = 0;
-
-  // THE GATHER PASS
   for (int j = 0; j < NUM_KEYS; j++) {
     
-    // 1. Check if the ISR flagged a state change
     if (Key_Actions[j].update_me) {
-      
-      // Clear the flag to acknowledge we saw it
       Key_Actions[j].update_me = false;
-
-      // Process the action
       if (Key_Actions[j].attack_release == true) {
-        // Attack
         Active_Keys[j] = true;
-        Key_States[j].phase = 0; // Reset phase for a clean start
+        Key_States[j].phase = 0; 
         Key_States[j].time = 0;
         Key_States[j].init_vel = Key_Actions[j].init_vel;
       } else {
-        // Release
         Active_Keys[j] = false;
-        // (If you add ADSR later, you wouldn't instantly deactivate here. 
-        // You would instead flag the state machine to enter the "Release" stage.)
       }
     }
-
-    // 2. Build the dense array for active playing notes
     if (Active_Keys[j]) {
       active_indices[local_num_active++] = j;
     }
   }
-
-  // AUDIO GENERATION PASS
   for (int i = 0; i < AUDIO_BUF_SIZE; i++) {
     int32_t sample = 0;
-
     for (int k = 0; k < local_num_active; k++) {
       uint8_t key_idx = active_indices[k];
       sample += Inc_Key_State(key_idx, &Key_States[key_idx]);

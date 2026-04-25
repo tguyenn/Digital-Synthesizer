@@ -36,27 +36,20 @@
 
 void DL_DAC12_init(DAC12_Regs *dac12, const DL_DAC12_Config *config)
 {
-    /* CTL 0 - Input Data Formatting */
     DL_DAC12_configDataFormat(
         dac12, config->representation, config->resolution);
-
-    /* CTL 1 - DAC Module */
     DL_Common_updateReg(&dac12->CTL1,
         (uint32_t) config->outputEnable |
             (uint32_t) config->voltageReferenceSource |
             (uint32_t) config->amplifierSetting,
         DAC12_CTL1_OPS_MASK | DAC12_CTL1_REFSP_MASK | DAC12_CTL1_REFSN_MASK |
             DAC12_CTL1_AMPEN_MASK | DAC12_CTL1_AMPHIZ_MASK);
-
-    /* CTL 2 - FIFO */
     DL_Common_updateReg(&dac12->CTL2,
         ((uint32_t) config->fifoEnable | (uint32_t) config->fifoTriggerSource |
             (uint32_t) config->dmaTriggerEnable |
             (uint32_t) config->dmaTriggerThreshold),
         DAC12_CTL2_DMATRIGEN_MASK | DAC12_CTL2_FIFOTH_MASK |
             DAC12_CTL2_FIFOEN_MASK | DAC12_CTL2_FIFOTRIGSEL_MASK);
-
-    /* CTL3 Register - Sample Time Generator */
     DL_Common_updateReg(&dac12->CTL3,
         ((uint32_t) config->sampleTimeGeneratorEnable |
             (uint32_t) config->sampleRate),

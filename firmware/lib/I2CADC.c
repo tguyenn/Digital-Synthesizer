@@ -54,32 +54,25 @@ void incrementMux(void) {
 }
 
 void setMux(uint8_t channel) {
-  // Optional safety catch: ensure we never select an unconnected channel
   if (channel > 11) { 
     channel = 0;
   }
-
-  // 1. Extract the individual bits from the absolute channel number
   uint8_t bit0 = channel & 1;
   uint8_t bit1 = (channel & (1 << 1)) >> 1;
   uint8_t bit2 = (channel & (1 << 2)) >> 2;
   uint8_t bit3 = (channel & (1 << 3)) >> 3;
-
-  // 2. Clear all 4 select lines simultaneously
   GPIOB->DOUTCLR31_0 = (1 << SEL0) | (1 << SEL1) | (1 << SEL2) | (1 << SEL3);
-  
-  // 3. Set the specific lines High based on the binary channel number
   GPIOB->DOUTSET31_0 =
       (bit0 << SEL0) | (bit1 << SEL1) | (bit2 << SEL2) | (bit3 << SEL3);
 }
 
 // ============================================================================
-// CALIBRATION CONSTANTS (Tune these to your specific hardware)
+// CALIBRATION CONSTANTS
 // ============================================================================
 // Assuming 12-bit ADC (0-4095). 1.7V / 3.3V * 4095 = ~2110
 #define RESTING_ADC_VAL 2110
 
-// Hysteresis thresholds to prevent bouncing/stuttering
+// hysteresis thresholds to prevent bouncing/stuttering
 #define POS_ATTACK_THRESH 240  // How far down the key must be to trigger
 #define POS_RELEASE_THRESH 240 // Must lift up past this point to release
 
@@ -87,62 +80,40 @@ void setMux(uint8_t channel) {
 #define MIN_ATTACK_VEL_THRESH 20
 // ============================================================================
 
-// State tracking arrays (Private to this ISR)
 int16_t prev_displacement[NUM_KEYS] = {0};
 static bool key_is_pressed[NUM_KEYS] = {false};
 
 inline void updateSingleKeyVal(void) {
   static uint8_t current_key = 0;
   uint8_t octave = current_key / 12;
-
-  // 1. Read the settled ADC value
   int16_t raw_adc = (int16_t)readADC(addresses[octave]);
-
-  // 2. Normalize displacement based on alternating magnet polarities
   int16_t displacement = 0;
   if (current_key % 2 == 0) {
-    // Even keys (e.g., North Pole approaching: Voltage goes UP)
+    // even keys - voltage up
     displacement = raw_adc - RESTING_ADC_VAL;
   } else {
-    // Odd keys (e.g., South Pole approaching: Voltage goes DOWN)
+    // odd keys - voltage down
     displacement = RESTING_ADC_VAL - raw_adc;
   }
-
-  // displacement = raw_adc - RESTING_ADC_VAL;
-
-
-  // 3. Calculate physical velocity (Rate of change of displacement)
-  // Because displacement is normalized, a downward press always yields positive
-  // velocity
   int16_t velocity = displacement - prev_displacement[current_key];
   prev_displacement[current_key] = displacement;
-
-  // 4. Trigger Logic (State Machine)
   if (!key_is_pressed[current_key]) {
-    // Note is currently OFF. Check if we should Attack.
     if (displacement > POS_ATTACK_THRESH && velocity >= MIN_ATTACK_VEL_THRESH) {
       key_is_pressed[current_key] = true;
       Attack_Key(current_key, velocity);
     }
   } else {
-    // Note is currently ON. Check if we should Release.
-    // Notice we don't check velocity here, just position.
     if (displacement < POS_RELEASE_THRESH) {
       key_is_pressed[current_key] = false;
       Release_Key(current_key);
     }
   }
-
-  // 5. Advance Multiplexer for the next ISR cycle
-  // incrementMux();
   setMux((current_key + 1) % 12);
-
   current_key++;
   if (current_key >= NUM_KEYS) {
     current_key = 0;
   }
 }
-
 void TIMA1_IRQHandler() {
   updateSingleKeyVal();
 }
