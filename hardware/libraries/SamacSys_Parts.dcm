@@ -108,4 +108,10 @@ K
 F http://www.ti.com/lit/gpn/lm321lv
 $ENDCMP
 #
+$CMP MSPM0G3507SDGS28R
+D ARM Microcontrollers - MCU 80MHz Arm M0+ MCU, 128KB Flash, 32KB SRAM, 212bit 4Msps ADC, DAC, 3COMP, 3op-amp, CAN-FD, MATHACL
+K
+F https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf
+$ENDCMP
+#
 #End Doc Library
