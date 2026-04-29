@@ -3063,7 +3063,7 @@
 	)
 	(rectangle
 		(start 58.42 107.95)
-		(end 183.642 144.145)
+		(end 180.34 144.145)
 		(stroke
 			(width 0)
 			(type default)
@@ -3074,8 +3074,8 @@
 		(uuid 8b3828d9-b7ab-47ee-9fc6-5ef096edd9f0)
 	)
 	(rectangle
-		(start 252.73 125.73)
-		(end 281.94 163.195)
+		(start 181.61 97.79)
+		(end 210.82 135.255)
 		(stroke
 			(width 0)
 			(type default)
@@ -3111,7 +3111,7 @@
 	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
-		(at 261.62 128.27 0)
+		(at 190.5 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3121,7 +3121,7 @@
 	)
 	(text "GRN"
 		(exclude_from_sim no)
-		(at 105.41 127.762 0)
+		(at 102.87 127.762 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3161,7 +3161,7 @@
 	)
 	(text "GRN"
 		(exclude_from_sim no)
-		(at 166.37 127.762 0)
+		(at 163.83 127.762 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3171,7 +3171,7 @@
 	)
 	(text "GRN"
 		(exclude_from_sim no)
-		(at 76.2 127.762 0)
+		(at 73.66 127.762 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3231,7 +3231,7 @@
 	)
 	(text "GRN"
 		(exclude_from_sim no)
-		(at 135.89 127.762 0)
+		(at 133.35 127.762 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3459,15 +3459,15 @@
 		(uuid "f8ff2766-ed18-48b7-9b8c-60158e346557")
 	)
 	(no_connect
-		(at 261.62 147.32)
+		(at 190.5 119.38)
 		(uuid "752f2a41-7bcd-4046-937e-89e40e9d955b")
 	)
 	(no_connect
-		(at 261.62 137.16)
+		(at 190.5 109.22)
 		(uuid "8def7d10-8b93-4fde-8a86-c3b8fc0240e0")
 	)
 	(no_connect
-		(at 261.62 157.48)
+		(at 190.5 129.54)
 		(uuid "97940bcd-bdc4-4bff-9b45-ab38014c241c")
 	)
 	(wire
@@ -3492,7 +3492,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 138.43) (xy 132.08 137.16)
+			(xy 129.54 138.43) (xy 129.54 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3642,7 +3642,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 115.57) (xy 162.56 116.84)
+			(xy 160.02 115.57) (xy 160.02 116.84)
 		)
 		(stroke
 			(width 0)
@@ -3712,7 +3712,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 138.43) (xy 101.6 137.16)
+			(xy 99.06 138.43) (xy 99.06 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3852,7 +3852,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 138.43) (xy 72.39 137.16)
+			(xy 69.85 138.43) (xy 69.85 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3902,7 +3902,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 138.43) (xy 162.56 137.16)
+			(xy 160.02 138.43) (xy 160.02 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3912,7 +3912,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 115.57) (xy 132.08 116.84)
+			(xy 129.54 115.57) (xy 129.54 116.84)
 		)
 		(stroke
 			(width 0)
@@ -3922,7 +3922,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 115.57) (xy 101.6 116.84)
+			(xy 99.06 115.57) (xy 99.06 116.84)
 		)
 		(stroke
 			(width 0)
@@ -4072,7 +4072,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 115.57) (xy 72.39 116.84)
+			(xy 69.85 115.57) (xy 69.85 116.84)
 		)
 		(stroke
 			(width 0)
@@ -20966,7 +20966,7 @@
 		(uuid "59b072d1-2dac-45fd-8737-82b24c17c35f")
 	)
 	(label "S2"
-		(at 124.46 132.08 180)
+		(at 121.92 132.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21226,7 +21226,7 @@
 		(uuid "dbcc5084-6835-4e9a-886d-93af457e4ba7")
 	)
 	(label "S3"
-		(at 154.94 132.08 180)
+		(at 152.4 132.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21236,7 +21236,7 @@
 		(uuid "de0ffb71-b634-41d9-9be4-16032bdff0b7")
 	)
 	(label "S1"
-		(at 93.98 132.08 180)
+		(at 91.44 132.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21276,7 +21276,7 @@
 		(uuid "ed519ea9-619f-4ed5-9dc0-dc006d05ee1f")
 	)
 	(label "S0"
-		(at 64.77 132.08 180)
+		(at 62.23 132.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22456,7 +22456,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 132.08 115.57 0)
+		(at 129.54 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22464,7 +22464,7 @@
 		(dnp no)
 		(uuid "211bc9e0-fb56-4914-b25e-c8472a0991d4")
 		(property "Reference" "#PWR0127"
-			(at 132.08 119.38 0)
+			(at 129.54 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22473,7 +22473,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 131.572 111.76 0)
+			(at 129.032 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22481,7 +22481,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 115.57 0)
+			(at 129.54 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22490,7 +22490,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 115.57 0)
+			(at 129.54 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22499,7 +22499,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 132.08 115.57 0)
+			(at 129.54 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23231,7 +23231,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 101.6 138.43 0)
+		(at 99.06 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23239,7 +23239,7 @@
 		(dnp no)
 		(uuid "38558618-607e-436c-b8a8-95873fcf8431")
 		(property "Reference" "#PWR0122"
-			(at 101.6 144.78 0)
+			(at 99.06 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23248,7 +23248,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 97.282 140.208 0)
+			(at 94.742 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23256,7 +23256,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 138.43 0)
+			(at 99.06 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23265,7 +23265,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 138.43 0)
+			(at 99.06 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23274,7 +23274,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 101.6 138.43 0)
+			(at 99.06 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23296,7 +23296,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GSD")
-		(at 69.85 132.08 0)
+		(at 67.31 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23305,7 +23305,7 @@
 		(fields_autoplaced yes)
 		(uuid "3a139ef2-c3d0-4423-a72b-91ccbb671f81")
 		(property "Reference" "Q101"
-			(at 76.2 130.8099 0)
+			(at 73.66 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23314,7 +23314,7 @@
 			)
 		)
 		(property "Value" "NX3020NAK-QR"
-			(at 76.2 133.3499 0)
+			(at 73.66 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23323,7 +23323,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:SOT95P230X110-3N"
-			(at 81.28 230.81 0)
+			(at 78.74 230.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23333,7 +23333,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NX3020NAK.pdf"
-			(at 81.28 330.81 0)
+			(at 78.74 330.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23343,7 +23343,7 @@
 			)
 		)
 		(property "Description" "30 V, N-channel Trench MOSFET"
-			(at 69.85 132.08 0)
+			(at 67.31 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23352,7 +23352,7 @@
 			)
 		)
 		(property "Height" "1.1"
-			(at 81.28 530.81 0)
+			(at 78.74 530.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23362,7 +23362,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 81.28 630.81 0)
+			(at 78.74 630.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23372,7 +23372,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 81.28 730.81 0)
+			(at 78.74 730.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23382,7 +23382,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 81.28 830.81 0)
+			(at 78.74 830.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23392,7 +23392,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NX3020NAK-QR"
-			(at 81.28 930.81 0)
+			(at 78.74 930.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23421,7 +23421,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 162.56 115.57 0)
+		(at 160.02 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23429,7 +23429,7 @@
 		(dnp no)
 		(uuid "3dd3d303-bb97-4f17-8bd4-c6ac0b50c720")
 		(property "Reference" "#PWR0128"
-			(at 162.56 119.38 0)
+			(at 160.02 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23438,7 +23438,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 162.052 111.76 0)
+			(at 159.512 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23446,7 +23446,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 115.57 0)
+			(at 160.02 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23455,7 +23455,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 115.57 0)
+			(at 160.02 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23464,7 +23464,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 162.56 115.57 0)
+			(at 160.02 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23561,7 +23561,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small_Filled")
-		(at 162.56 124.46 90)
+		(at 160.02 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23569,7 +23569,7 @@
 		(dnp no)
 		(uuid "4a0f6269-3e5f-4181-b886-f27ab4a92019")
 		(property "Reference" "LED105"
-			(at 164.338 123.19 90)
+			(at 161.798 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23578,7 +23578,7 @@
 			)
 		)
 		(property "Value" "S3"
-			(at 164.338 125.73 90)
+			(at 161.798 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23587,7 +23587,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:LEDC2012X40N"
-			(at 256.21 111.76 0)
+			(at 253.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23597,7 +23597,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 356.21 111.76 0)
+			(at 353.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23607,7 +23607,7 @@
 			)
 		)
 		(property "Description" "Standard LEDs - SMD Super Red, 633nm 180mcd, 20mA"
-			(at 162.56 124.46 0)
+			(at 160.02 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23616,7 +23616,7 @@
 			)
 		)
 		(property "Height" "0.4"
-			(at 556.21 111.76 0)
+			(at 553.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23626,7 +23626,7 @@
 			)
 		)
 		(property "Mouser Part Number" "720-LSR976-NR-1"
-			(at 656.21 111.76 0)
+			(at 653.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23636,7 +23636,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 756.21 111.76 0)
+			(at 753.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23646,7 +23646,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "ams OSRAM"
-			(at 856.21 111.76 0)
+			(at 853.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23656,7 +23656,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "LS R976-NR-1"
-			(at 956.21 111.76 0)
+			(at 953.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23757,7 +23757,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 138.43 0)
+		(at 160.02 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23765,7 +23765,7 @@
 		(dnp no)
 		(uuid "4fedbbf0-8cc8-419f-8a26-401a12ff2be2")
 		(property "Reference" "#PWR0124"
-			(at 162.56 144.78 0)
+			(at 160.02 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23774,7 +23774,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.242 140.208 0)
+			(at 155.702 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23782,7 +23782,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 138.43 0)
+			(at 160.02 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23791,7 +23791,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 138.43 0)
+			(at 160.02 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23800,7 +23800,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 138.43 0)
+			(at 160.02 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24137,7 +24137,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 72.39 119.38 180)
+		(at 69.85 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24145,7 +24145,7 @@
 		(dnp no)
 		(uuid "63356ccb-7532-40e7-94a3-761ac3ca7247")
 		(property "Reference" "R111"
-			(at 73.914 116.586 0)
+			(at 71.374 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24154,7 +24154,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 73.914 119.126 0)
+			(at 71.374 119.126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24163,7 +24163,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 74.168 119.38 90)
+			(at 71.628 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24172,7 +24172,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 72.39 119.38 0)
+			(at 69.85 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24181,7 +24181,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 72.39 119.38 0)
+			(at 69.85 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24190,7 +24190,7 @@
 			)
 		)
 		(property "Mouser Price/Inventory" ""
-			(at 72.39 119.38 0)
+			(at 69.85 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24215,7 +24215,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 162.56 119.38 180)
+		(at 160.02 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24223,7 +24223,7 @@
 		(dnp no)
 		(uuid "64b70cba-7357-43ad-abe7-798aa01abf5c")
 		(property "Reference" "R114"
-			(at 164.084 116.586 0)
+			(at 161.544 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24232,7 +24232,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 164.084 119.126 0)
+			(at 161.544 119.126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24241,7 +24241,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 164.338 119.38 90)
+			(at 161.798 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24250,7 +24250,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 162.56 119.38 0)
+			(at 160.02 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24259,7 +24259,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 162.56 119.38 0)
+			(at 160.02 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24268,7 +24268,7 @@
 			)
 		)
 		(property "Mouser Price/Inventory" ""
-			(at 162.56 119.38 0)
+			(at 160.02 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24293,7 +24293,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 132.08 119.38 180)
+		(at 129.54 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24301,7 +24301,7 @@
 		(dnp no)
 		(uuid "6550b3b9-4b9a-408a-b687-c0d7111fbde2")
 		(property "Reference" "R113"
-			(at 133.604 116.586 0)
+			(at 131.064 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24310,7 +24310,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 133.604 119.126 0)
+			(at 131.064 119.126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24319,7 +24319,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 133.858 119.38 90)
+			(at 131.318 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24328,7 +24328,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 132.08 119.38 0)
+			(at 129.54 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24337,7 +24337,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 132.08 119.38 0)
+			(at 129.54 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24346,7 +24346,7 @@
 			)
 		)
 		(property "Mouser Price/Inventory" ""
-			(at 132.08 119.38 0)
+			(at 129.54 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24436,7 +24436,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 261.62 134.62 0)
+		(at 190.5 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -24445,7 +24445,7 @@
 		(fields_autoplaced yes)
 		(uuid "6a3ae759-e322-47a5-ac62-e4f1e2d496d8")
 		(property "Reference" "H101"
-			(at 264.16 132.0799 0)
+			(at 193.04 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24454,7 +24454,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 264.16 134.6199 0)
+			(at 193.04 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24463,7 +24463,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:standoff_MH"
-			(at 261.62 134.62 0)
+			(at 190.5 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24472,7 +24472,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 261.62 134.62 0)
+			(at 190.5 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24481,7 +24481,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 261.62 134.62 0)
+			(at 190.5 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24712,7 +24712,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 72.39 115.57 0)
+		(at 69.85 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24720,7 +24720,7 @@
 		(dnp no)
 		(uuid "75aafaf1-7ce4-4bad-802e-e3dc88879387")
 		(property "Reference" "#PWR0125"
-			(at 72.39 119.38 0)
+			(at 69.85 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24729,7 +24729,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 71.882 111.76 0)
+			(at 69.342 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24737,7 +24737,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 72.39 115.57 0)
+			(at 69.85 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24746,7 +24746,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 72.39 115.57 0)
+			(at 69.85 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24755,7 +24755,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 72.39 115.57 0)
+			(at 69.85 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24777,7 +24777,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 261.62 144.78 0)
+		(at 190.5 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -24786,7 +24786,7 @@
 		(fields_autoplaced yes)
 		(uuid "790646e3-0b39-45f9-af38-74e04c07b269")
 		(property "Reference" "H102"
-			(at 264.16 142.2399 0)
+			(at 193.04 114.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24795,7 +24795,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 264.16 144.7799 0)
+			(at 193.04 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24804,7 +24804,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:standoff_MH"
-			(at 261.62 144.78 0)
+			(at 190.5 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24813,7 +24813,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 261.62 144.78 0)
+			(at 190.5 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24822,7 +24822,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 261.62 144.78 0)
+			(at 190.5 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25259,7 +25259,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small_Filled")
-		(at 101.6 124.46 90)
+		(at 99.06 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25267,7 +25267,7 @@
 		(dnp no)
 		(uuid "83473750-8625-4f0a-9105-6b445a7a38d0")
 		(property "Reference" "LED103"
-			(at 103.378 123.19 90)
+			(at 100.838 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25276,7 +25276,7 @@
 			)
 		)
 		(property "Value" "S1"
-			(at 103.378 125.73 90)
+			(at 100.838 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25285,7 +25285,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:LEDC2012X40N"
-			(at 195.25 111.76 0)
+			(at 192.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25295,7 +25295,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 295.25 111.76 0)
+			(at 292.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25305,7 +25305,7 @@
 			)
 		)
 		(property "Description" "Standard LEDs - SMD Super Red, 633nm 180mcd, 20mA"
-			(at 101.6 124.46 0)
+			(at 99.06 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25314,7 +25314,7 @@
 			)
 		)
 		(property "Height" "0.4"
-			(at 495.25 111.76 0)
+			(at 492.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25324,7 +25324,7 @@
 			)
 		)
 		(property "Mouser Part Number" "720-LSR976-NR-1"
-			(at 595.25 111.76 0)
+			(at 592.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25334,7 +25334,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 695.25 111.76 0)
+			(at 692.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25344,7 +25344,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "ams OSRAM"
-			(at 795.25 111.76 0)
+			(at 792.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25354,7 +25354,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "LS R976-NR-1"
-			(at 895.25 111.76 0)
+			(at 892.71 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25536,7 +25536,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 132.08 138.43 0)
+		(at 129.54 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25544,7 +25544,7 @@
 		(dnp no)
 		(uuid "88895fd4-decd-4d2a-adb5-812e21e18d54")
 		(property "Reference" "#PWR0123"
-			(at 132.08 144.78 0)
+			(at 129.54 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25553,7 +25553,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 127.762 140.208 0)
+			(at 125.222 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25561,7 +25561,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 138.43 0)
+			(at 129.54 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25570,7 +25570,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 138.43 0)
+			(at 129.54 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25579,7 +25579,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 138.43 0)
+			(at 129.54 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25601,7 +25601,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small_Filled")
-		(at 132.08 124.46 90)
+		(at 129.54 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25609,7 +25609,7 @@
 		(dnp no)
 		(uuid "8ec27cd0-c4c9-4e33-b0ab-1b74d54fcf6c")
 		(property "Reference" "LED104"
-			(at 133.858 123.19 90)
+			(at 131.318 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25618,7 +25618,7 @@
 			)
 		)
 		(property "Value" "S2"
-			(at 133.858 125.73 90)
+			(at 131.318 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25627,7 +25627,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:LEDC2012X40N"
-			(at 225.73 111.76 0)
+			(at 223.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25637,7 +25637,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 325.73 111.76 0)
+			(at 323.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25647,7 +25647,7 @@
 			)
 		)
 		(property "Description" "Standard LEDs - SMD Super Red, 633nm 180mcd, 20mA"
-			(at 132.08 124.46 0)
+			(at 129.54 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25656,7 +25656,7 @@
 			)
 		)
 		(property "Height" "0.4"
-			(at 525.73 111.76 0)
+			(at 523.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25666,7 +25666,7 @@
 			)
 		)
 		(property "Mouser Part Number" "720-LSR976-NR-1"
-			(at 625.73 111.76 0)
+			(at 623.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25676,7 +25676,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 725.73 111.76 0)
+			(at 723.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25686,7 +25686,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "ams OSRAM"
-			(at 825.73 111.76 0)
+			(at 823.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25696,7 +25696,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "LS R976-NR-1"
-			(at 925.73 111.76 0)
+			(at 923.19 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25722,7 +25722,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GSD")
-		(at 99.06 132.08 0)
+		(at 96.52 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25731,7 +25731,7 @@
 		(fields_autoplaced yes)
 		(uuid "91bd4416-9c2b-4a40-8bff-4c1f04d720e2")
 		(property "Reference" "Q102"
-			(at 105.41 130.8099 0)
+			(at 102.87 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25740,7 +25740,7 @@
 			)
 		)
 		(property "Value" "NX3020NAK-QR"
-			(at 105.41 133.3499 0)
+			(at 102.87 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25749,7 +25749,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:SOT95P230X110-3N"
-			(at 110.49 230.81 0)
+			(at 107.95 230.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25759,7 +25759,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NX3020NAK.pdf"
-			(at 110.49 330.81 0)
+			(at 107.95 330.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25769,7 +25769,7 @@
 			)
 		)
 		(property "Description" "30 V, N-channel Trench MOSFET"
-			(at 99.06 132.08 0)
+			(at 96.52 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25778,7 +25778,7 @@
 			)
 		)
 		(property "Height" "1.1"
-			(at 110.49 530.81 0)
+			(at 107.95 530.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25788,7 +25788,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 110.49 630.81 0)
+			(at 107.95 630.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25798,7 +25798,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 110.49 730.81 0)
+			(at 107.95 730.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25808,7 +25808,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 110.49 830.81 0)
+			(at 107.95 830.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25818,7 +25818,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NX3020NAK-QR"
-			(at 110.49 930.81 0)
+			(at 107.95 930.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26053,7 +26053,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GSD")
-		(at 160.02 132.08 0)
+		(at 157.48 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26062,7 +26062,7 @@
 		(fields_autoplaced yes)
 		(uuid "9e8bf6a6-6b5c-4e5a-91d2-9a18becb1be9")
 		(property "Reference" "Q104"
-			(at 166.37 130.8099 0)
+			(at 163.83 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26071,7 +26071,7 @@
 			)
 		)
 		(property "Value" "NX3020NAK-QR"
-			(at 166.37 133.3499 0)
+			(at 163.83 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26080,7 +26080,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:SOT95P230X110-3N"
-			(at 171.45 230.81 0)
+			(at 168.91 230.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26090,7 +26090,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NX3020NAK.pdf"
-			(at 171.45 330.81 0)
+			(at 168.91 330.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26100,7 +26100,7 @@
 			)
 		)
 		(property "Description" "30 V, N-channel Trench MOSFET"
-			(at 160.02 132.08 0)
+			(at 157.48 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26109,7 +26109,7 @@
 			)
 		)
 		(property "Height" "1.1"
-			(at 171.45 530.81 0)
+			(at 168.91 530.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26119,7 +26119,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 171.45 630.81 0)
+			(at 168.91 630.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26129,7 +26129,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 171.45 730.81 0)
+			(at 168.91 730.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26139,7 +26139,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 171.45 830.81 0)
+			(at 168.91 830.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26149,7 +26149,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NX3020NAK-QR"
-			(at 171.45 930.81 0)
+			(at 168.91 930.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26244,7 +26244,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 101.6 115.57 0)
+		(at 99.06 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26252,7 +26252,7 @@
 		(dnp no)
 		(uuid "a6614181-5dee-4b21-a1f5-402c2301f540")
 		(property "Reference" "#PWR0126"
-			(at 101.6 119.38 0)
+			(at 99.06 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26261,7 +26261,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 101.092 111.76 0)
+			(at 98.552 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26269,7 +26269,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 115.57 0)
+			(at 99.06 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26278,7 +26278,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 115.57 0)
+			(at 99.06 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26287,7 +26287,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 101.6 115.57 0)
+			(at 99.06 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26450,7 +26450,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 101.6 119.38 180)
+		(at 99.06 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26458,7 +26458,7 @@
 		(dnp no)
 		(uuid "ac1cf5c0-76fa-411f-a67e-a26af5598515")
 		(property "Reference" "R112"
-			(at 103.124 116.586 0)
+			(at 100.584 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26467,7 +26467,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 103.124 119.126 0)
+			(at 100.584 119.126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26476,7 +26476,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 103.378 119.38 90)
+			(at 100.838 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26485,7 +26485,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 101.6 119.38 0)
+			(at 99.06 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26494,7 +26494,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 101.6 119.38 0)
+			(at 99.06 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26503,7 +26503,7 @@
 			)
 		)
 		(property "Mouser Price/Inventory" ""
-			(at 101.6 119.38 0)
+			(at 99.06 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26606,7 +26606,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 72.39 138.43 0)
+		(at 69.85 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26614,7 +26614,7 @@
 		(dnp no)
 		(uuid "b590d029-5f63-47a4-a6b3-39aafa0973d1")
 		(property "Reference" "#PWR0121"
-			(at 72.39 144.78 0)
+			(at 69.85 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26623,7 +26623,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.072 140.208 0)
+			(at 65.532 140.208 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26631,7 +26631,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 72.39 138.43 0)
+			(at 69.85 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26640,7 +26640,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 72.39 138.43 0)
+			(at 69.85 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26649,7 +26649,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 138.43 0)
+			(at 69.85 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26758,7 +26758,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small_Filled")
-		(at 72.39 124.46 90)
+		(at 69.85 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -26766,7 +26766,7 @@
 		(dnp no)
 		(uuid "b646c17c-a5c6-4178-a997-c33c849215e3")
 		(property "Reference" "LED102"
-			(at 74.168 123.19 90)
+			(at 71.628 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26775,7 +26775,7 @@
 			)
 		)
 		(property "Value" "S0"
-			(at 74.168 125.73 90)
+			(at 71.628 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26784,7 +26784,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:LEDC2012X40N"
-			(at 166.04 111.76 0)
+			(at 163.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26794,7 +26794,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 266.04 111.76 0)
+			(at 263.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26804,7 +26804,7 @@
 			)
 		)
 		(property "Description" "Standard LEDs - SMD Super Red, 633nm 180mcd, 20mA"
-			(at 72.39 124.46 0)
+			(at 69.85 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26813,7 +26813,7 @@
 			)
 		)
 		(property "Height" "0.4"
-			(at 466.04 111.76 0)
+			(at 463.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26823,7 +26823,7 @@
 			)
 		)
 		(property "Mouser Part Number" "720-LSR976-NR-1"
-			(at 566.04 111.76 0)
+			(at 563.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26833,7 +26833,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 666.04 111.76 0)
+			(at 663.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26843,7 +26843,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "ams OSRAM"
-			(at 766.04 111.76 0)
+			(at 763.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26853,7 +26853,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "LS R976-NR-1"
-			(at 866.04 111.76 0)
+			(at 863.5 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27260,7 +27260,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GSD")
-		(at 129.54 132.08 0)
+		(at 127 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -27269,7 +27269,7 @@
 		(fields_autoplaced yes)
 		(uuid "d3e63765-1b22-459f-8a9b-71b34000730e")
 		(property "Reference" "Q103"
-			(at 135.89 130.8099 0)
+			(at 133.35 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27278,7 +27278,7 @@
 			)
 		)
 		(property "Value" "NX3020NAK-QR"
-			(at 135.89 133.3499 0)
+			(at 133.35 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27287,7 +27287,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:SOT95P230X110-3N"
-			(at 140.97 230.81 0)
+			(at 138.43 230.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27297,7 +27297,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NX3020NAK.pdf"
-			(at 140.97 330.81 0)
+			(at 138.43 330.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27307,7 +27307,7 @@
 			)
 		)
 		(property "Description" "30 V, N-channel Trench MOSFET"
-			(at 129.54 132.08 0)
+			(at 127 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27316,7 +27316,7 @@
 			)
 		)
 		(property "Height" "1.1"
-			(at 140.97 530.81 0)
+			(at 138.43 530.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27326,7 +27326,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 140.97 630.81 0)
+			(at 138.43 630.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27336,7 +27336,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 140.97 730.81 0)
+			(at 138.43 730.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27346,7 +27346,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 140.97 830.81 0)
+			(at 138.43 830.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27356,7 +27356,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NX3020NAK-QR"
-			(at 140.97 930.81 0)
+			(at 138.43 930.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27894,7 +27894,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 261.62 154.94 0)
+		(at 190.5 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -27903,7 +27903,7 @@
 		(fields_autoplaced yes)
 		(uuid "e9a89e1d-f0a9-49f1-abe8-f759a1cb9ab2")
 		(property "Reference" "H103"
-			(at 264.16 152.3999 0)
+			(at 193.04 124.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27912,7 +27912,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 264.16 154.9399 0)
+			(at 193.04 126.9999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27921,7 +27921,7 @@
 			)
 		)
 		(property "Footprint" "SamacSys_Parts:standoff_MH"
-			(at 261.62 154.94 0)
+			(at 190.5 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27930,7 +27930,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 261.62 154.94 0)
+			(at 190.5 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27939,7 +27939,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 261.62 154.94 0)
+			(at 190.5 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
