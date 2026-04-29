@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" version="29.6.0">
+  <diagram name="Page-1" id="682MJbkOJj6NKf8c5vbt">
+    <mxGraphModel dx="1120" dy="1724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Main Board" vertex="1">
+          <mxGeometry height="130" width="120" x="310" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-7" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=block;startFill=1;" target="wM1ampbGOrhFe0wG6NdU-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="270" />
+              <mxPoint x="370" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-8" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=blockThin;startFill=1;" target="wM1ampbGOrhFe0wG6NdU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Peripheral Board 1&lt;div&gt;I2C ADC&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-9" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;" target="wM1ampbGOrhFe0wG6NdU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Peripheral Board 2&lt;div&gt;I2C ADC&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="220" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-10" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;" target="wM1ampbGOrhFe0wG6NdU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Peripheral Board 3&lt;div&gt;I2C ADC&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-11" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;" target="wM1ampbGOrhFe0wG6NdU-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Peripheral Board 4&lt;div&gt;I2C ADC&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Peripheral Board 5&lt;div&gt;I2C ADC&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="760" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-28" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;endArrow=none;endFill=0;" target="wM1ampbGOrhFe0wG6NdU-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ST7735R LCD" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-33" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="wM1ampbGOrhFe0wG6NdU-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="83" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Rotary Digital Encoder 1" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-31" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="wM1ampbGOrhFe0wG6NdU-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="180" />
+              <mxPoint x="560" y="115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Rotary Digital Encoder 2" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-27" edge="1" parent="1" source="wM1ampbGOrhFe0wG6NdU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;startArrow=block;startFill=1;endArrow=none;endFill=0;" target="wM1ampbGOrhFe0wG6NdU-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wM1ampbGOrhFe0wG6NdU-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="WS2812B LED Strip" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
