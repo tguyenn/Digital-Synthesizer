@@ -1,5 +1,5 @@
 # Imagiano | Digital Synthesizer Project
-Brought to you by...
+Brought to you by...    
 [@jeffchang0](https://github.com/jeffchang0)    
 [@MorrisYLin](https://github.com/MorrisYLin)    
 [@zaarabilal](https://github.com/zaarabilal)    
@@ -13,8 +13,11 @@ Edit your README.md on GitHub.com.
 Drag and drop your video file (up to 100MB) directly into the editor pane.
 Wait for the upload to complete; GitHub will automatically generate a specialized Markdown link (e.g., https://github.com...).
 Preview and save your changes. The video will now appear as an inline player with sound controls.  -->
-test (replace this): https://github.com/user-attachments/assets/3ec2cc7f-7ef4-4a84-a22f-b311950bbfaf
-
+test (replace this): 
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/3ec2cc7f-7ef4-4a84-a22f-b311950bbfaf" width="600" controls>
+  </video>
+</p>
 
 Our digital piano consists of    
 1.) A main controller board  
