@@ -1,3 +1,6 @@
+
+
+
 # Imagiano
 Brought to you by...
 @jeffchang0
@@ -13,6 +16,8 @@ Edit your README.md on GitHub.com.
 Drag and drop your video file (up to 100MB) directly into the editor pane.
 Wait for the upload to complete; GitHub will automatically generate a specialized Markdown link (e.g., https://github.com...).
 Preview and save your changes. The video will now appear as an inline player with sound controls.  -->
+test (replace this): https://github.com/user-attachments/assets/3ec2cc7f-7ef4-4a84-a22f-b311950bbfaf
+
 
 Our digital piano consists of    
 1.) A main controller board  
