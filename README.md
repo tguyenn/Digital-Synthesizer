@@ -1,4 +1,6 @@
 # Imagiano | Digital Synthesizer Project
+### $$\color{#CC5500} \text{Your text here}$$
+
 Brought to you by...    
 [@jeffchang0](https://github.com/jeffchang0)    
 [@MorrisYLin](https://github.com/MorrisYLin)    
@@ -13,10 +15,13 @@ Edit your README.md on GitHub.com.
 Drag and drop your video file (up to 100MB) directly into the editor pane.
 Wait for the upload to complete; GitHub will automatically generate a specialized Markdown link (e.g., https://github.com...).
 Preview and save your changes. The video will now appear as an inline player with sound controls.  -->
+Here's a clip of our project in action:    
 test (replace this): 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/3ec2cc7f-7ef4-4a84-a22f-b311950bbfaf" width="600" controls>
+  <video src="https://github.com/user-attachments/assets/3ec2cc7f-7ef4-4a84-a22f-b311950bbfaf" width="300" controls>
   </video>
+  <br>
+  <em>(Note: Please enable audio for the full demonstration)</em>
 </p>
 
 Our digital piano consists of    
@@ -40,15 +45,30 @@ After some thinking and debate, we came down to this diagram for our overall sys
 We opted to have a main controller board daisy-chained with a series of peripheral boards. This main board would also be connected to user interfaces like an LCD, digital rotary encoders, and an addressable LED strip.        
 
 TODO: fix text rendering on some of these lol
-<p align="center">
-  <img src="docs/crude_system_diagram.png" width="400" alt="System Diagram">
-</p>
+<table>
+  <tr>
+    <td><img src="docs/crude_system_diagram.png" width="600" alt="Periph Schematic Rev A"></td>
+  </tr>
+  <tr>
+    <td colspan="1" align="center">
+      <em><b></b> System Plan Diagram</em>
+    </td>
+  </tr>
+</table>
 Each peripheral board would have an array of linear Hall effect sensors to determine key position, with 12 of these sensors to form an octave. 5 of these peripheral boards allowed us to cover a good range of pitches!  
        
 TODO: fix hall sensor 1 duplicate
-<p align="center">
-  <img src="docs/crude_peripheral_diagram.png" width="400" alt="Peripheral Diagram">
-</p>
+<table>
+  <tr>
+    <td><img src="docs/crude_peripheral_diagram.png" width="600" alt="Periph Schematic Rev A"></td>
+  </tr>
+  <tr>
+    <td colspan="1" align="center">
+      <em><b></b> Peripheral Board Plan Diagram</em>
+    </td>
+  </tr>
+</table>
+
 
 ## Electrical Design
 Once we had planned out the high-level details of the project, it was time to figure out what electrical connections needed to be made. First, it was time to go window shopping and datasheet diving on Mouser to figure out what we were even working with.
@@ -130,15 +150,16 @@ talk about what modules we were to use, drivers we had to make, coding practices
     - pinout for dc barrel jack was also wrong, so had to desolder and use a flying screw terminal setup
     - pulled reset pin to the wrong polarity, so had to cut a trace
 - competition restricted us to writing everything without using TI's beloved Syscfg, so we had to figure out module initialization code by ourselves
+- BOM management
 - magnet strength
     - magnet polarity pulling adjacent keys
     - hall sensor voltage swing amplitude not big enough
 
 ## Rev A Credits
-@jeffchang0 - Mechanical design/fabrication
-@MorrisYLin - DAC firmware, DSP firmware, PCB design    
-@zaarabilal - I2C ADC driver, ST7735/KY-040 encoder drivers, Mechanical design    
-@tguyenn - PCB design/assembly, WS2812B LED driver, Documentation    
+[@jeffchang0](https://github.com/jeffchang0) - Mechanical design/fabrication    
+[@MorrisYLin](https://github.com/MorrisYLin) - DAC firmware, DSP firmware, PCB design    
+[@zaarabilal](https://github.com/zaarabilal) - I2C ADC driver, ST7735/KY-040 encoder drivers, Mechanical design    
+[@tguyenn](https://github.com/tguyenn) - PCB design/assembly, WS2812B LED driver, Documentation    
 
 ## Rev B motivation and features
 Due to time and budget restrictions, we weren't able to cleanly implement all of our features. We didn't like that, so we decided to spin a new revision of the main board to add and fix some features.

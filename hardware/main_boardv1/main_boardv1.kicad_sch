@@ -810,7 +810,7 @@
 				(justify left)
 			)
 		)
-		(pin "ENC1{ENC}" output
+		(pin "ENC1{ENC}" input
 			(at 130.81 80.01 0)
 			(uuid "0e69a5cd-03f9-4945-9ea4-b5c0987effdb")
 			(effects
@@ -820,7 +820,7 @@
 				(justify right)
 			)
 		)
-		(pin "ENC2{ENC}" output
+		(pin "ENC2{ENC}" input
 			(at 130.81 82.55 0)
 			(uuid "76619934-84fd-466b-b33e-d08083b325cf")
 			(effects
@@ -861,7 +861,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "3")
 				)
@@ -923,7 +923,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "4")
 				)
@@ -965,7 +965,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "2")
 				)
@@ -1037,7 +1037,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "5")
 				)
@@ -1099,7 +1099,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "6")
 				)
@@ -1151,7 +1151,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "8")
 				)
@@ -1233,7 +1233,7 @@
 			)
 		)
 		(instances
-			(project "main_board"
+			(project "main_boardv1"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15"
 					(page "7")
 				)

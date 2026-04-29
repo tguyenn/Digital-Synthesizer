@@ -5743,7 +5743,7 @@
 		(uuid "78803188-4aed-444a-9dc6-e38b04f113ca")
 	)
 	(hierarchical_label "ENC2{ENC}"
-		(shape output)
+		(shape input)
 		(at 27.94 81.28 180)
 		(effects
 			(font
@@ -5787,7 +5787,7 @@
 		(uuid "a118c68b-f05e-43d8-bfe0-4430350dbead")
 	)
 	(hierarchical_label "ENC1{ENC}"
-		(shape output)
+		(shape input)
 		(at 27.94 68.58 180)
 		(effects
 			(font
