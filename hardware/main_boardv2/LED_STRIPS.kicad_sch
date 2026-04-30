@@ -1147,8 +1147,8 @@
 		(uuid 00f6b859-61b8-43af-858c-ba2f36de222c)
 	)
 	(rectangle
-		(start 13.97 100.33)
-		(end 66.675 118.11)
+		(start 13.97 87.63)
+		(end 66.675 105.41)
 		(stroke
 			(width 0)
 			(type default)
@@ -1160,7 +1160,7 @@
 	)
 	(rectangle
 		(start 13.97 63.5)
-		(end 82.55 99.695)
+		(end 82.55 86.36)
 		(stroke
 			(width 0)
 			(type default)
@@ -1216,7 +1216,7 @@
 	)
 	(text "Neopixel Strip"
 		(exclude_from_sim no)
-		(at 21.082 101.854 0)
+		(at 21.082 89.154 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1226,7 +1226,7 @@
 	)
 	(text "2A max"
 		(exclude_from_sim no)
-		(at 18.288 115.824 0)
+		(at 18.288 103.124 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1977,7 +1977,7 @@
 	)
 	(symbol
 		(lib_id "SamacSys_Parts:led_strip")
-		(at 36.83 105.41 0)
+		(at 36.83 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -1986,7 +1986,7 @@
 		(fields_autoplaced yes)
 		(uuid "b7eea910-fc43-45aa-9b47-c85d449a53a3")
 		(property "Reference" "U801"
-			(at 43.18 108.2674 0)
+			(at 43.18 95.5674 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1995,7 +1995,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 43.18 110.1725 0)
+			(at 43.18 97.4725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2004,7 +2004,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 105.41 0)
+			(at 36.83 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2013,7 +2013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 105.41 0)
+			(at 36.83 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2022,7 +2022,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 36.83 105.41 0)
+			(at 36.83 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2031,7 +2031,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.adafruit.com/product/2541"
-			(at 36.83 105.41 0)
+			(at 36.83 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
