@@ -11,20 +11,6 @@ Brought to you by...
 ## Introduction
 
 We decided to build a digital synthesizer/piano for our final project in UT Austin's Embedded Lab Class! We thought a piano was a great idea since we all love music, and a digital synthesizer presented a good deal of electrical, mechanical, and programming challenges.
-
-<!-- The most reliable method is to use the GitHub web interface to generate a hosted asset link: 
-Edit your README.md on GitHub.com.
-Drag and drop your video file (up to 100MB) directly into the editor pane.
-Wait for the upload to complete; GitHub will automatically generate a specialized Markdown link (e.g., https://github.com...).
-Preview and save your changes. The video will now appear as an inline player with sound controls.  -->
-Here's a clip of our project (Rev A) in action, credit to [@jeffchang0](https://github.com/jeffchang0):
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/4a25433e-0272-4781-a5fd-c7f0d65e424b" width="300" controls>
-  </video>
-</p>
-
-> [!IMPORTANT]
-> Please __**enable audio**__ and applaud the ~~mouth~~camerawork for the full demonstration!  
   
 Our digital piano consists of    
 1.) A main controller board  
@@ -32,7 +18,16 @@ Our digital piano consists of
 3.) Piano keys with magnets  
 4.) Piano enclosure     
     
-... all from scratch!
+... all from scratch!  
+  
+Here's a clip of our project (Rev A) in action, credit to [@jeffchang0](https://github.com/jeffchang0):
+> [!IMPORTANT]
+> Please <ins>__enable audio__</ins> and applaud the ~~mouth~~camerawork for the full demonstration!  
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/4a25433e-0272-4781-a5fd-c7f0d65e424b" width="300" controls>
+  </video>
+</p>
 
 ##  1. <a name='TableofContents'></a>Table of Contents
 1. [System Design](#SystemDesign)
@@ -165,12 +160,13 @@ talk about what modules we were to use, drivers we had to make, coding practices
 ### DSP
 ### LCD/Encoders
 ### LED Strip
-To implement the WS2812B serial protocol, we used TimerG7 and the DMA controller to achieve precise pulse-width modulation without CPU intervention. By sourcing the timer from an 80 MHz clock, a fixed period of 1.25 µs (100 clock cycles) was defined to match the standard WS2812B bit duration. The critical logic relied on the dynamic adjustment of the duty cycle for each bit, as TimerG7 was configured to publish a Generic Event 0 to Event Channel 1 every time the counter reached its reload point. The DMA controller, acting as a subscriber to this channel, executed a Repeat Single Transfer upon each trigger. This transfer moved a `uint16_t` duty cycle value from the `serialLEDArr` buffer directly into the TimerG7 Capture Compare Register (CC01)
+To implement the WS2812B serial protocol, we used TimerG7 and the DMA controller to achieve precise PWM without CPU intervention. By sourcing the timer from an 80 MHz clock, a fixed period of 1.25 µs (100 clock cycles) was defined to match the standard WS2812B bit duration. The critical logic relied on the dynamic adjustment of the duty cycle for each bit, as TimerG7 was configured to publish a Generic Event 0 to Event Channel 1 every time the counter reached its reload point. The DMA controller, acting as a subscriber to this channel, executed a Repeat Single Transfer upon each trigger. This transfer moved a `uint16_t` duty cycle value from the `serialLEDArr` buffer directly into the TimerG7 Capture Compare Register (CC01)
 
 
 ##  6. <a name='ImplementationChallenges'></a>Implementation Challenges
 - jumpers!
-    - During board bringup, we could not get the I2C module to output from our MSPM0 devkit pins. This was especially problematic and took us 2 hours 
+    - During board bringup, we could not get the I2C module to output from our MSPM0 devkit pins. This was especially unfortunate and took us two hours to realize we had to remove some configuration jumpers on the devkit.
+- DSP calculations took so much CPU time that no other peripherals besides ADC sampling worked
 - never trust anything. everything is a lie
     - pinout for onboard MSPM0 MCU was wrong on one rail, so we had to bluewire many pins
     - pinout for dc barrel jack was also wrong, so had to desolder and use a flying screw terminal setup

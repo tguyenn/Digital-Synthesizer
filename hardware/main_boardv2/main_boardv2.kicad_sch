@@ -188,16 +188,6 @@
 		)
 		(uuid "094dea97-36d6-473c-a0ab-f4e22e3b7a23")
 	)
-	(bus
-		(pts
-			(xy 104.14 125.73) (xy 110.49 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1238aaa8-f06b-44df-8d0e-9a39227987df")
-	)
 	(wire
 		(pts
 			(xy 151.13 119.38) (xy 140.97 119.38)
@@ -217,16 +207,6 @@
 			(type default)
 		)
 		(uuid "13bcb238-3c7f-4fa9-8121-afb738d2a9f7")
-	)
-	(bus
-		(pts
-			(xy 104.14 101.6) (xy 104.14 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "197c3ead-b327-4b0a-90b9-3c2da2bf48c8")
 	)
 	(wire
 		(pts
@@ -397,16 +377,6 @@
 			(type default)
 		)
 		(uuid "7c1f4104-4bac-4e40-ae68-66683e94271d")
-	)
-	(bus
-		(pts
-			(xy 107.95 101.6) (xy 104.14 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "858bc628-2483-4c8d-8aef-3bc91e980d4c")
 	)
 	(bus
 		(pts
@@ -840,16 +810,6 @@
 				(justify right)
 			)
 		)
-		(pin "S[0..3]" output
-			(at 107.95 101.6 180)
-			(uuid "907d6478-efb4-4d3a-9023-96598a30fa33")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "I2C0{I2C}" bidirectional
 			(at 107.95 99.06 180)
 			(uuid "74cdef31-8a95-46ce-93f5-14165c85e734")
@@ -980,16 +940,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "S[0..3]" input
-			(at 110.49 125.73 180)
-			(uuid "c6f87114-1e3d-4785-b51b-48ea7391f40b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "I2C0{I2C}" bidirectional

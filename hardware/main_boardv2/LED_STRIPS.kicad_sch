@@ -1224,6 +1224,16 @@
 		)
 		(uuid "4a054ce1-5f93-406f-a656-1f278c0421d5")
 	)
+	(text "todo: put damping resistor on data!\n\ndo i need a damping resistor on 3v3 side of level shifter as well?\n"
+		(exclude_from_sim no)
+		(at 83.058 68.58 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "5311efdf-c0de-42ce-9345-e209933232cf")
+	)
 	(text "2A max"
 		(exclude_from_sim no)
 		(at 18.288 103.124 0)
@@ -1494,7 +1504,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0a03c89a-7363-4481-9e8b-f92733a035a5")
-		(property "Reference" "#PWR0803"
+		(property "Reference" "#PWR0801"
 			(at 38.1 59.69 0)
 			(effects
 				(font
@@ -1544,7 +1554,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "#PWR0803")
+					(reference "#PWR0801")
 					(unit 1)
 				)
 			)
@@ -1756,7 +1766,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53f68088-7575-472a-b65f-37bb861d9b33")
-		(property "Reference" "C801"
+		(property "Reference" "C802"
 			(at 73.406 73.66 0)
 			(effects
 				(font
@@ -1819,7 +1829,7 @@
 		(instances
 			(project ""
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "C801")
+					(reference "C802")
 					(unit 1)
 				)
 			)
@@ -1834,7 +1844,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6962e87c-e8d3-4981-83cb-bcbea3c07290")
-		(property "Reference" "TP801"
+		(property "Reference" "TP802"
 			(at 56.896 73.152 0)
 			(effects
 				(font
@@ -1894,7 +1904,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "TP801")
+					(reference "TP802")
 					(unit 1)
 				)
 			)
@@ -1909,7 +1919,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6db17b5a-1e1a-40ab-a2f2-c10b51913fb7")
-		(property "Reference" "TP803"
+		(property "Reference" "TP801"
 			(at 25.908 38.1 0)
 			(effects
 				(font
@@ -1969,7 +1979,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "TP803")
+					(reference "TP801")
 					(unit 1)
 				)
 			)
@@ -2058,7 +2068,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd067d38-d12d-40eb-bfc7-8fd499fb8a71")
-		(property "Reference" "#PWR0801"
+		(property "Reference" "#PWR0802"
 			(at 52.07 74.93 0)
 			(effects
 				(font
@@ -2108,7 +2118,7 @@
 		(instances
 			(project ""
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "#PWR0801")
+					(reference "#PWR0802")
 					(unit 1)
 				)
 			)
@@ -2123,7 +2133,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bdb56e25-81e8-4b93-b0fe-1b72ebe6a889")
-		(property "Reference" "J802"
+		(property "Reference" "J801"
 			(at 23.368 74.168 0)
 			(effects
 				(font
@@ -2178,7 +2188,7 @@
 		(instances
 			(project ""
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "J802")
+					(reference "J801")
 					(unit 1)
 				)
 			)
@@ -2193,7 +2203,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c05f768c-199e-4e5d-9aad-9380beda0a0c")
-		(property "Reference" "#PWR0805"
+		(property "Reference" "#PWR0804"
 			(at 76.2 45.72 0)
 			(effects
 				(font
@@ -2243,7 +2253,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "#PWR0805")
+					(reference "#PWR0804")
 					(unit 1)
 				)
 			)
@@ -2258,7 +2268,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c56c4ee8-daeb-4726-be2e-0f3f59e3f2f4")
-		(property "Reference" "C802"
+		(property "Reference" "C801"
 			(at 54.61 55.626 90)
 			(effects
 				(font
@@ -2321,7 +2331,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "C802")
+					(reference "C801")
 					(unit 1)
 				)
 			)
@@ -2337,7 +2347,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dde61d72-3499-49b8-851d-fa61c232d88b")
-		(property "Reference" "#PWR0804"
+		(property "Reference" "#PWR0803"
 			(at 53.34 85.09 0)
 			(effects
 				(font
@@ -2387,7 +2397,7 @@
 		(instances
 			(project "main_board"
 				(path "/5332464e-0c3a-49d2-8fb5-731d0e42ee15/efc14d49-5591-4687-bd9d-a48f4b92c254"
-					(reference "#PWR0804")
+					(reference "#PWR0803")
 					(unit 1)
 				)
 			)
