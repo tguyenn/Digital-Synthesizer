@@ -22,7 +22,9 @@ Here's a clip of our project (Rev A) in action, credit to [@jeffchang0](https://
   <video src="https://github.com/user-attachments/assets/4a25433e-0272-4781-a5fd-c7f0d65e424b" width="300" controls>
   </video>
 </p>
-(Note: Please **__enable audio__** and applaud the ~~mouth~~camerawork for the full demonstration!)    
+
+> [!IMPORTANT]
+> Please __**enable audio**__ and applaud the ~~mouth~~camerawork for the full demonstration!  
   
 Our digital piano consists of    
 1.) A main controller board  
