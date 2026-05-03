@@ -21,9 +21,9 @@ Here's a clip of our project (Rev A) in action, credit to [@jeffchang0](https://
 <p align="center">
   <video src="https://github.com/user-attachments/assets/4a25433e-0272-4781-a5fd-c7f0d65e424b" width="300" controls>
   </video>
-  <em><b>(Note: Please enable audio and applaud the mouth camerawork for the full demonstration)</em></b>
 </p>
-
+(Note: Please **__enable audio__** and applaud the ~~mouth~~camerawork for the full demonstration!)    
+  
 Our digital piano consists of    
 1.) A main controller board  
 2.) A series of peripheral boards  
@@ -37,7 +37,7 @@ Our digital piano consists of
 1. [Electrical Design](#ElectricalDesign)
 1. [Mechanical Design](#MechanicalDesign)
 1. [Firmware Design](#FirmwareDesign)
-1. [implementation challenges](#implementationchallenges)
+1. [Implementation Challenges](#ImplementationChallenges)
 1. [Rev A Credits](#RevACredits)
 1. [Rev B motivation and features](#RevBmotivationandfeatures)
 
@@ -118,6 +118,12 @@ After verifying the schematic, we moved onto laying out the PCB itself:
 
 
 ### Design Choices
+#### Why did you choose Texas Instrument's MSPM0G3507 MCU?
+- Since this was a class project, we were required to use this particular MCU.
+
+#### Why did you use an MSPM0G3507 launchpad/devkit instead of having two discrete MCUs?
+- Since this was a class project, we were required to have a fallback plan in case our discrete MCU did not work for any reason.  
+
 #### Why did you choose I2C over SPI for the wired peripheral board bus?
 - At first we were going to go with an SPI bus connected as a "star topology" vs daisy-chained. We ultimately went with I2C to reduce the amount of GPIO usage and wires (i.e. SPI CS line for every peripheral board -> just the I2C SDA & SCL). We did consider the possible issue of bus capacitance since our bus would be almost a meter long (!!), but we just accepted our fate (reduce I2C speed if necessary).  
 
@@ -127,17 +133,14 @@ After verifying the schematic, we moved onto laying out the PCB itself:
 #### Why do we have LEDs on the analog mux select lines?
 - For fun! It's also nice to have a visual indicator when debugging (i.e. which sensor index is being sampled right at this moment when I pause?)  
 
-#### Why did you use an MSPM0G3507 launchpad/devkit instead of having two discrete MCUs?
-- Since this was a class, we were required to have a fallback plan in case our discrete MCU did not work for any reason.  
-
 #### Why did you use a mix of through hole components (LDO, capacitors) or other non-ideal components (speaker amp)?
-- Since this was a class, we were restricted to a very stringent budget ($60!) for the entire project. The through hole components and speaker amp were considered "free" since we could get them from a university equipment desk.    
+- Since this was a class project, we were restricted to a very stringent budget ($60!) for the entire project. The through hole components and speaker amp were considered "free" since we could get them from a university equipment desk.    
 
 #### Why did you use funny protoboards as connectors instead of using right angle connectors?
 - Same thing as above. Right angle connectors would be the way to go, but the budget limitations said otherwise.    
   
 #### Why did you choose a 2 layer PCB?
-- 4 layers would be overkill for this project since board density wasn't crazy. This is also a school project, so we didn't need to worry about EMC regulations (RIP ground plane) and had to worry more about the budget.
+- 4 layers would be overkill for this project since board density wasn't crazy. This was also a school project, so we didn't need to worry about EMC regulations (RIP ground plane) and had to worry more about the budget.
 
 #### What happened for your speaker output circuit?
 - At the last minute (literally like an hour before designs were due) we realized our original amp design could potentially not work (slipped through team and TA design review), so we slapped on a backup circuit (simple voltage buffer) on the other side. The particular issue was our questionable adaptation of a (free!) differential amplifier for a single ended application
@@ -154,16 +157,23 @@ TODO: talk about mass manufacturing of keys
 ##  5. <a name='FirmwareDesign'></a>Firmware Design
 
 TODO: @MorrisYLin @zaarabilal pls
-
 talk about what modules we were to use, drivers we had to make, coding practices, etc
 
-##  6. <a name='implementationchallenges'></a>implementation challenges
+### ADC Sampling
+### DSP
+### LCD/Encoders
+### LED Strip
+To implement the WS2812B serial protocol, we used TimerG7 and the DMA controller to achieve precise pulse-width modulation without CPU intervention. By sourcing the timer from an 80 MHz clock, a fixed period of 1.25 µs (100 clock cycles) was defined to match the standard WS2812B bit duration. The critical logic relied on the dynamic adjustment of the duty cycle for each bit, as TimerG7 was configured to publish a Generic Event 0 to Event Channel 1 every time the counter reached its reload point. The DMA controller, acting as a subscriber to this channel, executed a Repeat Single Transfer upon each trigger. This transfer moved a `uint16_t` duty cycle value from the `serialLEDArr` buffer directly into the TimerG7 Capture Compare Register (CC01)
+
+
+##  6. <a name='ImplementationChallenges'></a>Implementation Challenges
 - jumpers!
+    - During board bringup, we could not get the I2C module to output from our MSPM0 devkit pins. This was especially problematic and took us 2 hours 
 - never trust anything. everything is a lie
     - pinout for onboard MSPM0 MCU was wrong on one rail, so we had to bluewire many pins
     - pinout for dc barrel jack was also wrong, so had to desolder and use a flying screw terminal setup
     - pulled reset pin to the wrong polarity, so had to cut a trace
-- competition restricted us to writing everything without using TI's beloved Syscfg, so we had to figure out module initialization code by ourselves
+- Competition restricted us to writing everything without using TI's beloved SysConfig, so we had to figure out some module initializations by ourselves (datasheet + TRM)
 - BOM management
 - magnet strength
     - magnet polarity pulling adjacent keys
@@ -179,21 +189,54 @@ talk about what modules we were to use, drivers we had to make, coding practices
 Due to time and budget restrictions, we weren't able to cleanly implement all of our features. We didn't like that, so we decided to spin a new revision of the main board to add and fix some features.
 
 Some of these features include:
-- Replaced MSPM0G3507 with dual core microcontroller to properly handle the math compute load, sound output, LED output, and user interface
-  - also dual-core for fun
+- Replaced MSPM0G3507 with dual core microcontroller (RP2040) to properly handle the math compute load, sound output, LED strip output, and user interface
+  - Dual-core instead of two discrete MCUs because flashing twice and maintaining two codebases is annoying
 - Removed backpack devkit
+  - Escape jumper hell
 - SD card for loading in graphics and differnet preset sound configs??
 - Cleaned audio output circuit
-- Silkscreen art!
-- Replaced all through-hole with SMD
+- Replaced all through-hole with SMD components
 - Replace all LDO with switching regulator
-- black silkscreen + enig because i love burning money
-- added ESD protection
+- Black soldermask + ENIG PCBs
+- added ESD protection ???
+- Silkscreen art!
 
-![Mv2_F](docs/images/mainboardv2_F.png)
-![Mv2_B](docs/images/mainboardv2_B.png)
-![Pv2_F](docs/images/periphboardv2_F.png)
-![Pv2_B](docs/images/periphboardv2_B.png)
+<table>
+  <tr>
+    <td><img src="docs/images/main_schematicv2.png" width="400" alt="Main Schematic Rev B"></td>
+    <td><img src="docs/images/periph_schematicv2.png" width="600" alt="Periph Schematic Rev B"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <em><b>Rev B -</b>  Main (Left) and Peripheral (Right) Schematics</em>
+    </td>
+  </tr>
+</table>
+
+After verifying the schematic, we moved onto laying out the PCB itself:
+<table>
+  <tr>
+    <td><img src="docs/images/mainboardv2_F.png" width="400" alt="Front"></td>
+    <td><img src="docs/images/mainboardv2_B.png" width="400" alt="Back"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <em><b>Rev B -</b> Front and back main board</em>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="docs/images/periphboardv2_F.png" width="400" alt="Front"></td>
+    <td><img src="docs/images/periphboardv2_B.png" width="400" alt="Back"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <em><b>Rev B -</b> Front and back peripheral board</em>
+    </td>
+  </tr>
+</table>
 
 coming soon...™️ 
 
